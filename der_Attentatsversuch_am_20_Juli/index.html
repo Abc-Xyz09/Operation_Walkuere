@@ -14,16 +14,14 @@ function getBreadCrumbs() {
     .split("/")
     .filter(Boolean);
 
-    let currentPath = "";
-    const paths = [];
+    basePath = "/Operation_Walkuere/"
 
-    for (const part of parts) {
+    let currentPath = basePath;
+    const paths = [basePath];
+
+    for (const part of parts.slice(1)) {
     currentPath += part + "/";
     paths.push(currentPath);
-    }
-
-    if (paths.length === 0 || paths[0] === "/") {
-        paths[0] = "/Operation_Walkuere/";
     }
 
     innerList = [];
