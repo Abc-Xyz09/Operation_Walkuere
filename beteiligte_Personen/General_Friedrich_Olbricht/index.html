@@ -17,7 +17,7 @@ function getBreadCrumbs() {
     let currentPath = "/";
     const paths = ["/"];
 
-    for (const part of parts) {
+    for (const part of parts.slice(1)) {
     currentPath += part + "/";
     paths.push(currentPath);
     }
