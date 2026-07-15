@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stauffenberg</title>
+    <link rel=stylesheet href="/css/styles.css">
+</head>
+
+<script>
+
+function getBreadCrumbs() {
+    let parts = window.location.pathname
+    .split("/")
+    .filter(Boolean);
+
+    let currentPath = "/";
+    const paths = ["/"];
+
+    for (const part of parts) {
+    currentPath += part + "/";
+    paths.push(currentPath);
+    }
+
+    innerList = [];
+    parts.unshift("Startseite");
+
+    for (let i = 0; i < paths.length; i++) {
+        innerList.push(`<li class="breadcrumbs-item"><a href="${paths[i]}" class="breadcrumbs-link">${formatName(parts[i])}</a></li>`);
+    }
+
+    let completeList = `<ul class="breadcrumbs">${innerList.join(" ")}</ul>`;
+    document.getElementById("breadcrumbs").innerHTML = completeList;
+}
+
+function formatName(part) {
+    if (breadcrumbMap[part]) {
+        return breadcrumbMap[part];
+    }
+
+    return part
+        .replace(/[-_]/g, " ")
+        .replace(/\.[^.]+$/, "")
+}
+
+const breadcrumbMap = {
+    "der_Attentatsversuch_am_20_Juli": "der Attentatsversuch am 20. Juli",
+    "Darstellungen_des_Attentatversuchs_in_der_Oeffentlichkeit": "Darstellungen des Attentatversuchs in der Öffentlichkeit"
+}
+
+</script>
+
+<body onload="getBreadCrumbs()">
+    <header>
+    <div class="header-top">
+        <a href="/">Operation Walküre</a>
+    </div>
+    <div id="breadcrumbs" class="breadcrumbs-div">
+    </div>
+</header> 
+    <div class="content">
+        <h2>Inhalt</h2>
+<ul>
+<li><a href="https://www.bpb.de/kurz-knapp/hintergrund-aktuell/141288/20-juli-1944-attentat-auf-adolf-hitler/">https://www.bpb.de/kurz-knapp/hintergrund-aktuell/141288/20-juli-1944-attentat-auf-adolf-hitler/</a></li>
+</ul>
+<h2>Bilder</h2>
+<ul>
+<li><strong>Stauffenberg</strong>: <a href="https://wir-selbst.com/2025/07/20/claus-schenk-graf-von-stauffenberg-es-lebe-das-heilige-deutschland-2/">https://wir-selbst.com/2025/07/20/claus-schenk-graf-von-stauffenberg-es-lebe-das-heilige-deutschland-2/</a></li>
+<li><strong>Olbricht</strong>: <a href="https://www.factsnippet.com/site/facts-about-friedrich-olbricht.html">https://www.factsnippet.com/site/facts-about-friedrich-olbricht.html</a></li>
+<li><strong>Beck</strong>: <a href="https://kids.kiddle.co/Ludwig_Beck">https://kids.kiddle.co/Ludwig_Beck</a></li>
+<li><strong>Quirnheim</strong>: <a href="https://de.wikipedia.org/wiki/Datei:Albert_Mertz_von_Quirnheim.jpg">https://de.wikipedia.org/wiki/Datei:Albert_Mertz_von_Quirnheim.jpg</a></li>
+<li><strong>Tresckow</strong>: <a href="https://www.bundesarchiv.de/themen-entdecken/online-entdecken/geschichtsgalerien/eine-gewissenlose-clique-frontfremder-parteifuehrer-der-20-juli-1944/">https://www.bundesarchiv.de/themen-entdecken/online-entdecken/geschichtsgalerien/eine-gewissenlose-clique-frontfremder-parteifuehrer-der-20-juli-1944/</a></li>
+<li><strong>Goerdeler</strong>: <a href="https://www.geschichte.sachsen.de/carl-friedrich-goerdeler-5676.html?_pp=%7B%7D">https://www.geschichte.sachsen.de/carl-friedrich-goerdeler-5676.html?_pp={}</a></li>
+</ul>
+<p>yet to visit</p>
+<ul>
+<li><a href="https://www.bpb.de/shop/zeitschriften/izpb/widerstand-gegen-den-nationalsozialismus-330/232803/widerstand-als-reaktion-auf-krieg-und-ns-gewaltverbrechen/">https://www.bpb.de/shop/zeitschriften/izpb/widerstand-gegen-den-nationalsozialismus-330/232803/widerstand-als-reaktion-auf-krieg-und-ns-gewaltverbrechen/</a></li>
+<li><a href="https://www.dhm.de/lemo/biografie/claus-stauffenberg">https://www.dhm.de/lemo/biografie/claus-stauffenberg</a></li>
+</ul>
+
+    </div>
+    <footer>
+    von Mathilda Altvater und Sora Müller &nbsp; &nbsp;
+</footer>
+</body>

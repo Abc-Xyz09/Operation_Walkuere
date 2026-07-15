@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operation Walküre</title>
+    <link rel=stylesheet href="/css/styles.css">
+</head>
+
+<script>
+
+function getBreadCrumbs() {
+    let parts = window.location.pathname
+    .split("/")
+    .filter(Boolean);
+
+    let currentPath = "/";
+    const paths = ["/"];
+
+    for (const part of parts) {
+    currentPath += part + "/";
+    paths.push(currentPath);
+    }
+
+    innerList = [];
+    parts.unshift("Startseite");
+
+    for (let i = 0; i < paths.length; i++) {
+        innerList.push(`<li class="breadcrumbs-item"><a href="${paths[i]}" class="breadcrumbs-link">${formatName(parts[i])}</a></li>`);
+    }
+
+    let completeList = `<ul class="breadcrumbs">${innerList.join(" ")}</ul>`;
+    document.getElementById("breadcrumbs").innerHTML = completeList;
+}
+
+function formatName(part) {
+    if (breadcrumbMap[part]) {
+        return breadcrumbMap[part];
+    }
+
+    return part
+        .replace(/[-_]/g, " ")
+        .replace(/\.[^.]+$/, "")
+}
+
+const breadcrumbMap = {
+    "der_Attentatsversuch_am_20_Juli": "der Attentatsversuch am 20. Juli",
+    "Darstellungen_des_Attentatversuchs_in_der_Oeffentlichkeit": "Darstellungen des Attentatversuchs in der Öffentlichkeit"
+}
+
+</script>
+
+<body onload="getBreadCrumbs()">
+    <header>
+    <div class="header-top">
+        <a href="/">Operation Walküre</a>
+    </div>
+    <div id="breadcrumbs" class="breadcrumbs-div">
+    </div>
+</header> 
+    <div class="content">
+        <h2>Darstellungen des Attentatversuchs in der Öffentlichkeit in der Nachkriegszeit</h2>
+<ul>
+<li>bis in die 1950er Jahre wirkt Darstellung der NS nach</li>
+<li>Betrachtung von Zeitgenossen als Versuch der Militärkreise, eigenen Ruf zu retten</li>
+<li>gegen anderen Staat politisch instrumentalisiert
+<ul>
+<li>DDR: <a href="https://www.bpb.de/themen/erinnerung/geschichte-und-erinnerung/39817/erinnerungskultur-in-der-ddr/">https://www.bpb.de/themen/erinnerung/geschichte-und-erinnerung/39817/erinnerungskultur-in-der-ddr/</a></li>
+</ul>
+</li>
+<li>für Täter u. Mitläufer problematisch: zeigt, dass Widerstand möglich gewesen wäre</li>
+<li>überwiegend positive Bewertung erstmals 2004 in repräsentativer Umfrage dt. Bevölkerung</li>
+<li>kritisch bewertet: Widerstandskämpfer nicht generell gegen NS, Vorstellungen Nachkriegszeit nicht basierend auf dem.-freiheitlichen Grundsätzen</li>
+</ul>
+
+    </div>
+    <footer>
+    von Mathilda Altvater und Sora Müller &nbsp; &nbsp;
+</footer>
+</body>

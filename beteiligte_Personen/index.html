@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beteiligte Personen</title>
+    <link rel=stylesheet href="/css/styles.css">
+</head>
+
+<script>
+
+function getBreadCrumbs() {
+    let parts = window.location.pathname
+    .split("/")
+    .filter(Boolean);
+
+    let currentPath = "/";
+    const paths = ["/"];
+
+    for (const part of parts) {
+    currentPath += part + "/";
+    paths.push(currentPath);
+    }
+
+    innerList = [];
+    parts.unshift("Startseite");
+
+    for (let i = 0; i < paths.length; i++) {
+        innerList.push(`<li class="breadcrumbs-item"><a href="${paths[i]}" class="breadcrumbs-link">${formatName(parts[i])}</a></li>`);
+    }
+
+    let completeList = `<ul class="breadcrumbs">${innerList.join(" ")}</ul>`;
+    document.getElementById("breadcrumbs").innerHTML = completeList;
+}
+
+function formatName(part) {
+    if (breadcrumbMap[part]) {
+        return breadcrumbMap[part];
+    }
+
+    return part
+        .replace(/[-_]/g, " ")
+        .replace(/\.[^.]+$/, "")
+}
+
+const breadcrumbMap = {
+    "der_Attentatsversuch_am_20_Juli": "der Attentatsversuch am 20. Juli",
+    "Darstellungen_des_Attentatversuchs_in_der_Oeffentlichkeit": "Darstellungen des Attentatversuchs in der Öffentlichkeit"
+}
+
+</script>
+
+<body onload="getBreadCrumbs()">
+    <header>
+    <div class="header-top">
+        <a href="/">Operation Walküre</a>
+    </div>
+    <div id="breadcrumbs" class="breadcrumbs-div">
+    </div>
+</header> 
+    <div class="content">
+        
+<h2>Beteiligte Personen</h2>
+
+<div class="beteiligte_Personen">
+
+    <a href="Graf_Claus_Schenk_von_Stauffenberg/" class="full-size beteiligte_Personen_box">
+        <img src="/assets/stauffenberg.jpg" alt="Stauffenberg" class="beteiligte_Personen_image stauffenberg_image">
+        <div class="beteiligte_Personen_name">
+            Graf Claus Schenk von Stauffenberg
+        </div>
+    </a>
+
+    <a href="General_Friedrich_Olbricht/" class="full-size beteiligte_Personen_box">
+        <img src="/assets/olbricht.jpg" alt="Olbricht" class="beteiligte_Personen_image olbricht_image">
+        <div class="beteiligte_Personen_name">
+            General Friedrich Olbricht
+        </div>
+    </a>
+
+    <a href="Generaloberst_Ludwig_Beck/" class="full-size beteiligte_Personen_box">
+        <img src="/assets/beck.jpg" alt="Beck" class="beteiligte_Personen_image beck_image">
+        <div class="beteiligte_Personen_name">
+            Generaloberst Ludwig Beck
+        </div>
+    </a>
+
+    <a href="Albrecht_Ritter_Mertz_von_Quirnheim/" class="full-size beteiligte_Personen_box">
+        <img src="/assets/quirnheim.jpg" alt="Quirnheim" class="beteiligte_Personen_image quirnheim_image">
+        <div class="beteiligte_Personen_name">
+            Albrecht Ritter Mertz von Quirnheim
+        </div>
+    </a>
+
+    <a href="Generalmajor_Henning_von_Tresckow/" class="full-size beteiligte_Personen_box">
+        <img src="/assets/tresckow.jpg" alt="Tresckow" class="beteiligte_Personen_image tresckow_image">
+        <div class="beteiligte_Personen_name">
+            Generalmajor Henning von Tresckow
+        </div>
+    </a>
+
+    <a href="Carl_Friedrich_Goerdeler" class="full-size beteiligte_Personen_box">
+        <img src="/assets/goerdeler.jpg" alt="Goerdeler" class="beteiligte_Personen_image goerdeler_image">
+        <div class="beteiligte_Personen_name">
+            Carl Friedrich Goerdeler
+        </div>
+    </a>
+
+</div>
+    </div>
+    <footer>
+    von Mathilda Altvater und Sora Müller &nbsp; &nbsp;
+</footer>
+</body>

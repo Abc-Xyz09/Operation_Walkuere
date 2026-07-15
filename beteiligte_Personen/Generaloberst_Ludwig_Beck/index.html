@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beteiligte Personen</title>
+    <link rel=stylesheet href="/css/styles.css">
+</head>
+
+<script>
+
+function getBreadCrumbs() {
+    let parts = window.location.pathname
+    .split("/")
+    .filter(Boolean);
+
+    let currentPath = "/";
+    const paths = ["/"];
+
+    for (const part of parts) {
+    currentPath += part + "/";
+    paths.push(currentPath);
+    }
+
+    innerList = [];
+    parts.unshift("Startseite");
+
+    for (let i = 0; i < paths.length; i++) {
+        innerList.push(`<li class="breadcrumbs-item"><a href="${paths[i]}" class="breadcrumbs-link">${formatName(parts[i])}</a></li>`);
+    }
+
+    let completeList = `<ul class="breadcrumbs">${innerList.join(" ")}</ul>`;
+    document.getElementById("breadcrumbs").innerHTML = completeList;
+}
+
+function formatName(part) {
+    if (breadcrumbMap[part]) {
+        return breadcrumbMap[part];
+    }
+
+    return part
+        .replace(/[-_]/g, " ")
+        .replace(/\.[^.]+$/, "")
+}
+
+const breadcrumbMap = {
+    "der_Attentatsversuch_am_20_Juli": "der Attentatsversuch am 20. Juli",
+    "Darstellungen_des_Attentatversuchs_in_der_Oeffentlichkeit": "Darstellungen des Attentatversuchs in der Öffentlichkeit"
+}
+
+</script>
+
+<body onload="getBreadCrumbs()">
+    <header>
+    <div class="header-top">
+        <a href="/">Operation Walküre</a>
+    </div>
+    <div id="breadcrumbs" class="breadcrumbs-div">
+    </div>
+</header> 
+    <div class="content">
+        <h2>Generaloberst Ludwig Beck</h2>
+
+    </div>
+    <footer>
+    von Mathilda Altvater und Sora Müller &nbsp; &nbsp;
+</footer>
+</body>

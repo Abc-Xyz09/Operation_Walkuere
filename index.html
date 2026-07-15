@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operation Walküre</title>
+    <link rel=stylesheet href="/css/styles.css">
+</head>
+
+<script>
+
+function getBreadCrumbs() {
+    let parts = window.location.pathname
+    .split("/")
+    .filter(Boolean);
+
+    let currentPath = "/";
+    const paths = ["/"];
+
+    for (const part of parts) {
+    currentPath += part + "/";
+    paths.push(currentPath);
+    }
+
+    innerList = [];
+    parts.unshift("Startseite");
+
+    for (let i = 0; i < paths.length; i++) {
+        innerList.push(`<li class="breadcrumbs-item"><a href="${paths[i]}" class="breadcrumbs-link">${formatName(parts[i])}</a></li>`);
+    }
+
+    let completeList = `<ul class="breadcrumbs">${innerList.join(" ")}</ul>`;
+    document.getElementById("breadcrumbs").innerHTML = completeList;
+}
+
+function formatName(part) {
+    if (breadcrumbMap[part]) {
+        return breadcrumbMap[part];
+    }
+
+    return part
+        .replace(/[-_]/g, " ")
+        .replace(/\.[^.]+$/, "")
+}
+
+const breadcrumbMap = {
+    "der_Attentatsversuch_am_20_Juli": "der Attentatsversuch am 20. Juli",
+    "Darstellungen_des_Attentatversuchs_in_der_Oeffentlichkeit": "Darstellungen des Attentatversuchs in der Öffentlichkeit"
+}
+
+</script>
+
+<body onload="getBreadCrumbs()">
+    <header>
+    <div class="header-top">
+        <a href="/">Operation Walküre</a>
+    </div>
+    <div id="breadcrumbs" class="breadcrumbs-div">
+    </div>
+</header> 
+    <div class="content">
+        <h2>Allgemeine Informationen</h2>
+<ul>
+<li>Ziel: Hitler ausschalten, Krieg beenden</li>
+<li>geplant von:
+<ul>
+<li>General Friedrich Olbricht</li>
+<li>Generaloberst Ludwig Beck</li>
+<li>Albrecht Ritter Mertz von Quirnheim</li>
+<li>Generalmajor Henning von Tresckow</li>
+<li>Carl Friedrich Goerdeler</li>
+</ul>
+</li>
+<li>auch Zusammenarbeit m. soz.-dem. Arbeiterbewegung (<a href="https://www.bpb.de/shop/zeitschriften/apuz/169571/sozialdemokratische-arbeiterbewegung-zwischen-freier-assoziation-und-moralischem-staat/">https://www.bpb.de/shop/zeitschriften/apuz/169571/sozialdemokratische-arbeiterbewegung-zwischen-freier-assoziation-und-moralischem-staat/</a>)</li>
+<li>wollen im Anschluss an <a href="der_Attentatsversuch_am_20_Juli/">Attentat</a> Regierungsverantwortung übernehmen; sind aber über zuküftiges Staatsmodell unterschiedlicher Auffassung</li>
+<li>basiert auf &quot;Geheimer Kommandosache&quot; der Nationalsozialisten; mit dieser sollten etwaige Aufstände ausländischer Zwangsarbeiter im dt. Reich niedergeschlagen werden; auf dieser Grundlage Kontakte geknüpft in Wehrkreisen, wichtigen Ämtern</li>
+<li>Entwurf einer Regierungserklärungbereits ausgearbeitet; sollte von Beck als provisorischem Staatsoberhaupt und Goerdeler als Kanzler unterzeichnet werden</li>
+<li>schlägt mit scheitern Attentat fehl; in derselben Nacht werden Stauffenberg und weitere Hauptverantwortliche im Hof des Bendlerblocks (Berliner Zentrale Umsturzversuch) erschossen</li>
+<li>Ludwig Beck zum Selbstmord gezwungen</li>
+<li>Henning von Treschow nimmt sich später an Ostfront das Leben</li>
+</ul>
+<p></p>
+<hr>
+<p></p>
+<p><a href="beteiligte_Personen/">beteiligte Personen</a></p>
+<p><a href="der_Attentatsversuch_am_20_Juli/">der Attentatsversuch am 20. Juli</a></p>
+<p><a href="Darstellungen_des_Attentatversuchs_in_der_Oeffentlichkeit/">Darstellungen des Attentatversuchs in der Öffentlichkeit</a></p>
+<p></p>
+<hr>
+<p></p>
+<p><a href="quellen/">Quellen</a></p>
+
+    </div>
+    <footer>
+    von Mathilda Altvater und Sora Müller &nbsp; &nbsp;
+</footer>
+</body>

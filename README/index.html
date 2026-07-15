@@ -1,0 +1,88 @@
+<h1>Website lokal starten</h1>
+<p>Diese Website läuft nicht direkt durch einen Doppelklick auf die Datei <code>index.html</code>. Stattdessen muss ein kleiner lokaler Webserver gestartet werden. Dadurch funktioniert die Website genauso wie im Internet, bleibt aber vollständig auf deinem Computer.</p>
+<h2>Windows</h2>
+<h3>1. Prüfen, ob Python installiert ist</h3>
+<p>Öffne die <strong>Eingabeaufforderung</strong>:</p>
+<ul>
+<li>Drücke <code>Windows-Taste + R</code></li>
+<li>Gib <code>cmd</code> ein</li>
+<li>Drücke Enter</li>
+</ul>
+<p>Gib ein:</p>
+<pre><code>python --version
+</code></pre>
+<p>Wenn eine Versionsnummer angezeigt wird, ist alles bereit.</p>
+<p>Falls nicht, installiere Python von:
+https://www.python.org/downloads/</p>
+<p>Achte bei der Installation darauf, die Option <strong>&quot;Add Python to PATH&quot;</strong> zu aktivieren.</p>
+<h3>2. Website starten</h3>
+<ol>
+<li>Öffne den Ordner der Website.</li>
+<li>Klicke oben in die Adressleiste des Explorers.</li>
+<li>Schreibe:</li>
+</ol>
+<pre><code>cmd
+</code></pre>
+<p>und drücke Enter.</p>
+<ol start="4">
+<li>Gib ein:</li>
+</ol>
+<pre><code>python -m http.server
+</code></pre>
+<ol start="5">
+<li>Öffne im Browser:</li>
+</ol>
+<pre><code>http://localhost:8000
+</code></pre>
+<p>Die Website sollte nun funktionieren.</p>
+<hr>
+<h2>macOS</h2>
+<h3>1. Terminal öffnen</h3>
+<p>Öffne die App <strong>Terminal</strong>.</p>
+<h3>2. Zum Website-Ordner wechseln</h3>
+<p>Am einfachsten:</p>
+<ul>
+<li>Ziehe den Website-Ordner in das Terminalfenster.</li>
+<li>Schreibe davor:</li>
+</ul>
+<pre><code>cd 
+</code></pre>
+<p>Beispiel:</p>
+<pre><code>cd /Users/Name/Desktop/Website
+</code></pre>
+<h3>3. Server starten</h3>
+<p>Gib ein:</p>
+<pre><code>python3 -m http.server
+</code></pre>
+<p>Öffne anschließend im Browser:</p>
+<pre><code>http://localhost:8000
+</code></pre>
+<hr>
+<h2>Linux</h2>
+<h3>1. Terminal öffnen</h3>
+<p>Öffne ein Terminalfenster.</p>
+<h3>2. In den Website-Ordner wechseln</h3>
+<p>Zum Beispiel:</p>
+<pre><code>cd ~/Desktop/Website
+</code></pre>
+<h3>3. Server starten</h3>
+<p>Gib ein:</p>
+<pre><code>python3 -m http.server
+</code></pre>
+<p>Öffne anschließend im Browser:</p>
+<pre><code>http://localhost:8000
+</code></pre>
+<hr>
+<h2>Server beenden</h2>
+<p>Wenn du fertig bist:</p>
+<ul>
+<li>Gehe zurück ins Terminal bzw. die Eingabeaufforderung.</li>
+<li>Drücke:</li>
+</ul>
+<pre><code>Strg + C
+</code></pre>
+<p>Danach kannst du das Fenster schließen.</p>
+<h2>Hinweis</h2>
+<p>Die Website läuft nur auf deinem eigenen Computer. Sie wird nicht ins Internet hochgeladen und ist für andere Personen nicht erreichbar.</p>
+<p>Datei erstellt mit ChatGPT
+Prompt: could you quickly write instructions (in German) on how to set up a local server on the most common OSs? We're talking about 11th graders here</p>
