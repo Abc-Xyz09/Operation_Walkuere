@@ -107,7 +107,7 @@ header a:hover {
 }
 
 .content a:hover {
-  color: hsl(240, 30%, 70%);
+  color: hsl(240, 30%, 30%);
   text-decoration: none;
 }
 
