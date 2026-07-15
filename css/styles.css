@@ -96,8 +96,18 @@ header a:hover {
   margin-bottom: .3em;
 }
 
-.content a {
+.content a:visited {
   color: hsl(240, 30%, 50%);
+  text-decoration: none;
+}
+
+.content a:link {
+  color: hsl(240, 30%, 50%);
+  text-decoration: none;
+}
+
+.content a:hover {
+  color: hsl(240, 30%, 70%);
   text-decoration: none;
 }
 
