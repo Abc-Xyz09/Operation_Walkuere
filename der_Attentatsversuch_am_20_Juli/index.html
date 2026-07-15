@@ -22,6 +22,10 @@ function getBreadCrumbs() {
     paths.push(currentPath);
     }
 
+    if (paths.length === 0 || paths[0] === "/") {
+        paths[0] = "/Operation_Walkuere/";
+    }
+
     innerList = [];
 
     for (let i = 0; i < paths.length; i++) {
