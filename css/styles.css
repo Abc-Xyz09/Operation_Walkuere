@@ -96,8 +96,9 @@ header a:hover {
   margin-bottom: .3em;
 }
 
-.content a:hover {
-  color: hsl(240, 70%, 5%);
+.content a {
+  color: hsl(240, 30%, 50%);
+  text-decoration: none;
 }
 
 /*----------------------------------------------------------------------------------*/
