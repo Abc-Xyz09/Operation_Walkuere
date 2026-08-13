@@ -115,7 +115,7 @@ const breadcrumbMap = {
     document.querySelectorAll(".beteiligte_Personen_box").forEach(box => {
         box.addEventListener("click", function(event) {
 
-            if (window.matchMedia("(hover: none)").matches) {
+            if (event.pointerType === "touch") {
 
                 if (!box.classList.contains("name-visible")) {
                     event.preventDefault();
