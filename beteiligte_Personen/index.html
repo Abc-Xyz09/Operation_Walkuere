@@ -109,6 +109,29 @@ const breadcrumbMap = {
     </a>
 
 </div>
+
+<script>
+
+    document.querySelectorAll(".beteiligte_Personen_box").forEach(box => {
+        box.addEventListener("click", function(event) {
+
+            if (window.matchMedia("(hover: none)").matches) {
+
+                if (!box.classList.contains("name-visible")) {
+                    event.preventDefault();
+
+                    document
+                        .querySelectorAll(".beteiligte_Personen_box.name-visible")
+                        .forEach(otherBox => {
+                            otherBox.classList.remove("name-visible");
+                        });
+
+                    box.classList.add("name-visible");
+                }
+            }
+        });
+    });
+</script>
     </div>
     <footer>
     von Mathilda Altvater und Sora Müller &nbsp; &nbsp;
