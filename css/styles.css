@@ -169,8 +169,16 @@ header a:hover {
   object-position: center -10px;
 }
 
-.beck_image, .quirnheim_image, .tresckow_image, .goerdeler_image {
+.beck_image, .quirnheim_image, .tresckow_image, .goerdeler_image .haeften_image .hoepner_image{
   object-position: center 0px;
+}
+
+.haeften-image {
+  transform: scale(1.3);
+}
+
+.hoepner_image {
+  transform: scale(1.2);
 }
 
 @media (hover: hover) {
