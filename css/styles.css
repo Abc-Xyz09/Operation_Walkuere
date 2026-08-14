@@ -43,9 +43,7 @@ header a:hover {
   width: 100%;
   line-height: 1.3em;
   background-color: hsl(240, 10%, 17%);
-  padding-bottom: 2px;
   display: block;
-  padding-top: 2px;
 }
 
 .breadcrumbs {
