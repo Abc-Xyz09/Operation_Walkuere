@@ -41,8 +41,8 @@ header a:hover {
 
 .breadcrumbs-div {
   margin-top: 0px;
-  padding-bottom: 5px;
-  padding-top: 5px;
+  padding-bottom: 1px;
+  padding-top: 1px;
   width: 100%;
   line-height: 1.3em;
   background-color: hsl(240, 10%, 17%);
