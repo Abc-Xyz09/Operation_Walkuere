@@ -11,6 +11,14 @@ body {
   min-height: 100vh;
   flex-direction: column;
 }
+
+h2 {
+  font-size: 35px;
+}
+
+h3 {
+  font-size: 25px;
+}
 /* #endregion */
 
 
@@ -81,8 +89,8 @@ header a:hover {
 
 /* #region content */
 .content {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
   padding-top: 5px;
   padding-bottom: 5px;
   color: black;
