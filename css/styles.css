@@ -89,8 +89,8 @@ header a:hover {
 
 /* #region content */
 .content {
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
   padding-top: 5px;
   padding-bottom: 5px;
   color: black;
@@ -117,6 +117,13 @@ header a:hover {
   text-decoration: none;
 }
 
+.subordinate-box {
+  margin-left: 40px;
+  margin-right: 40px;
+  padding: 0px 10px;
+  background-color: rgba(50, 50, 60, 0.2);
+  border: 2px solid rgba(50, 50, 60, 0.6);
+}
 /* #endregion*/
 
 
