@@ -35,6 +35,7 @@ h3 {
 
 .header-top a {
   color: rgb(240,240,240);
+  color: red;
   font-size: 25px;
   font-weight: bold;
   text-decoration: none;
