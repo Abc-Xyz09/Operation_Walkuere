@@ -144,7 +144,7 @@ function navigationHeader() {
 
     document.querySelectorAll(".toggle-navigation").forEach(button => {
         button.addEventListener("click", function () {
-            document.getElementById("dropdown-content-layer1").classList.toggle("active");
+            document.getElementById("dropdown-content").classList.toggle("active");
         });
     });
 
