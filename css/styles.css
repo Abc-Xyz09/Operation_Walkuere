@@ -48,9 +48,6 @@ header a:hover {
 
 
 /* #region navigation */
-.dropdown-content {
-  display: flex;
-}
 
 .toggle-navigation {
   background-color: #0000;
@@ -64,35 +61,36 @@ header a:hover {
   height: 25px;
 }
 
-.dropdown-content-layer1 a{
+.dropdown-content a{
   color: black;
 }
 
-.dropdown-content-layer1 a:visited {
+.dropdown-content a:visited {
   color: black;
 }
 
 .dropdown-layer1, .dropdown-layer2, .dropdown-layer3, .dropdown-layer4, .dropdown-layer5 {
   width: 100%;
+  display: flex;
   border-top: 0.1px solid whitesmoke;
   border-bottom: 0.1px solid whitesmoke;
   padding: 5px;
 }
 
 .dropdown-layer1 {
-  background-color: hsl(240, 10%, 35%);
+  background-color: hsl(240, 10%, 32%);
 }
 .dropdown-layer2 {
+  background-color: hsl(240, 10%, 34%);
+}
+.dropdown-layer1 {
+  background-color: hsl(240, 10%, 36%);
+}
+.dropdown-layer1 {
+  background-color: hsl(240, 10%, 38%);
+}
+.dropdown-layer1 {
   background-color: hsl(240, 10%, 40%);
-}
-.dropdown-layer1 {
-  background-color: hsl(240, 10%, 45%);
-}
-.dropdown-layer1 {
-  background-color: hsl(240, 10%, 50%);
-}
-.dropdown-layer1 {
-  background-color: hsl(240, 10%, 55%);
 }
 
 .dropdown-content .icon-arrow svg {
@@ -107,7 +105,7 @@ header a:hover {
   background-color: rgba(0,0,0,0);
 }
 
-.toggle-dropdown1.active svg, .toggle-dropdown2.active svg, .toggle-dropdown3.active svg {
+.toggle-dropdown1-navigation.active svg, .toggle-dropdown2-navigation.active svg, .toggle-dropdown3-navigation.active svg {
   transform: rotate(180deg);
 }
 
