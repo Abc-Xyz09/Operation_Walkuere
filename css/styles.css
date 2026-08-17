@@ -125,6 +125,23 @@ header a:hover {
   background-color: rgba(50, 50, 60, 0.2);
   border: 2px solid rgba(50, 50, 60, 0.6);
 }
+
+.table-of-contents {
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 0px 10px;
+  background-color: rgba(50, 50, 60, 0.2);
+  border: 2px solid rgba(50, 50, 60, 0.6);
+}
+
+.table-of-contents a {
+  color: black;
+  text-decoration: underline;
+}
+
+.table-of-contents a:visited {
+  color: black;
+}
 /* #endregion*/
 
 
