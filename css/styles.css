@@ -74,8 +74,9 @@ header a:hover {
 
 .dropdown-layer1, .dropdown-layer2, .dropdown-layer3, .dropdown-layer4, .dropdown-layer5 {
   width: 100%;
-  border-top: 1px solid whitesmoke;
-  border-bottom: 1px solid whitesmoke;
+  border-top: 0.1px solid whitesmoke;
+  border-bottom: 0.1px solid whitesmoke;
+  padding: 5px;
 }
 
 .dropdown-layer1 {
