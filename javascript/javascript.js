@@ -106,38 +106,34 @@ navigation = [
     }
 ]
 
-/*
+
 function navigationHeader() {
     let navigationHeaderHtml = "";
     for (const primaryLayer of navigation) {
-        navigationHeaderHtml += 
-                navigationHeaderHtml += "<div class=\"dropdown-content-layer2-header\">"
-                navigationHeaderHtml += generateChildrenNavigationHeader(secondaryLayer, 1);
-                navigationHeaderHtml += "</div>"
-            }
-        navigationHeaderHtml += "</div> </div>"
-    document.getElementById("navigation_Header").innerHTML = navigationHeaderHtml;
+             navigationHeaderHtml += generateLayerNavigationHeader(navigation, 0);
+    }
+    document.getElementById("dropdown-content-layer1").innerHTML = navigationHeaderHtml;
 
 
-    document.querySelectorAll(".toggle-dropdown-navigation").forEach(button => {
+    document.querySelectorAll(".toggle-navigation").forEach(button => {
         button.addEventListener("click", function () {
-            this.classList.toggle("active");
+            document.getElementById("dropdown-content-layer1").classList.toggle("active");
         });
     });
 
-    document.querySelectorAll(".toggle-dropdown1-header").forEach(button => {
+    document.querySelectorAll(".toggle-dropdown1-navigation").forEach(button => {
     button.addEventListener("click", function() {
         this.classList.toggle("active");
         });
     });
 
-    document.querySelectorAll(".toggle-dropdown2-header").forEach(button => {
+    document.querySelectorAll(".toggle-dropdown2-navigation").forEach(button => {
         button.addEventListener("click", function () {
             this.classList.toggle("active");
         });
     });
 
-    document.querySelectorAll(".toggle-dropdown3-header").forEach(button => {
+    document.querySelectorAll(".toggle-dropdown3-navigation").forEach(button => {
         button.addEventListener("click", function () {
             this.classList.toggle("active");
         });
@@ -146,15 +142,32 @@ function navigationHeader() {
 }
 
 
-function generateChildrenNavigationHeader(parent, parentLayer) {
+function generateLayerNavigationHeader(parent, parentLayer) {
     let currentLayer = parentLayer + 1;
     let child = "";
     for (const i of parent.children) {
-        child +=  `<div class="dropdown-layer${currentLayer}-header"> <a href="${i.url}"> ${i.title} </a>`;
+        child +=  `
+
+<div class="dropdown-layer${currentLayer}">
+    <a href="${i.url}">
+        ${i.title}
+    </a>
+        
+        `;
         if (i.children) {
-                child += `<button type ="button" class="toggle-dropdown${currentLayer}-header"> <span class="icon-arrow"> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewBox="57 35.171 26 16.043" enable-background="new 57 35.171 26 16.043" xml:space="preserve"> <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z"> </path> </svg> </span> </button>`
+                child += `
+
+<button type ="button" class="toggle-dropdown${currentLayer}-navigation">
+    <span class="icon-arrow">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="26px" height="16.043px" viewBox="57 35.171 26 16.043" enable-background="new 57 35.171 26 16.043" xml:space="preserve">
+            <path d="M57.5,38.193l12.5,12.5l12.5-12.5l-2.5-2.5l-10,10l-10-10L57.5,38.193z"></path>
+        </svg>
+    </span>
+</button>
+
+                `;
             }
-        child += "</div>"
+            child += "</div>"
         if (i.children) {
             child += `<div class="dropdown-content-layer${currentLayer+1}-header">`
             child += generateChildrenNavigationHeader(i, currentLayer);
@@ -164,4 +177,3 @@ function generateChildrenNavigationHeader(parent, parentLayer) {
     }
     return child;
 }
-*/
