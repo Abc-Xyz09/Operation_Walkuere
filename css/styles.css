@@ -61,10 +61,34 @@ header a:hover {
   height: 25px;
 }
 
+.dropdown-content-layer1 a{
+  color: black;
+}
+
+.dropdown-content-layer1 a:visited {
+  color: black;
+}
+
 .dropdown-layer1, .dropdown-layer2, .dropdown-layer3, .dropdown-layer4, .dropdown-layer5 {
   width: 100%;
   border-top: 1px solid whitesmoke;
   border-bottom: 1px solid whitesmoke;
+}
+
+.dropdown-layer1 {
+  background-color: hsl(240, 10%, 35%);
+}
+.dropdown-layer2 {
+  background-color: hsl(240, 10%, 40%);
+}
+.dropdown-layer1 {
+  background-color: hsl(240, 10%, 45%);
+}
+.dropdown-layer1 {
+  background-color: hsl(240, 10%, 50%);
+}
+.dropdown-layer1 {
+  background-color: hsl(240, 10%, 55%);
 }
 
 .dropdown-content .icon-arrow svg {
