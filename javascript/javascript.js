@@ -169,7 +169,7 @@ function generateLayerNavigationHeader(parent, parentLayer) {
             }
             child += "</div>"
         if (i.children) {
-            child += `<div class="dropdown-content-layer${currentLayer+1}-header">`
+            child += `<div class="dropdown-content-layer${currentLayer+1}">`
             child += generateLayerNavigationHeader(i, currentLayer);
             child += "</div>"
         }
