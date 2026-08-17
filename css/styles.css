@@ -61,7 +61,7 @@ header a:hover {
   height: 25px;
 }
 
-.dropdown-content-layer1, .dropdown-content-layer2, .dropdown-content-layer3, .dropdown-content-layer4, .dropdown-content-layer5 {
+.dropdown-layer1, .dropdown-layer2, .dropdown-layer3, .dropdown-layer4, .dropdown-layer5 {
   width: 100%;
   border-top: 1px solid whitesmoke;
   border-bottom: 1px solid whitesmoke;
@@ -70,6 +70,7 @@ header a:hover {
 .dropdown-content .icon-arrow svg {
   border: 1px solid black;
   padding: 3px;
+  width: 15px;
 }
 
 .dropdown-content button {
@@ -93,7 +94,7 @@ header a:hover {
   display: none;
 }
 
-.dropdown-layer1:has(.toggle-dropdown1.active) + .dropdown-content-layer2{
+.dropdown-layer1:has(.toggle-dropdown1-navigation.active) + .dropdown-content-layer2{
   display: block;
 }
 
@@ -101,14 +102,14 @@ header a:hover {
   display: none;
 }
 
-.dropdown-layer2:has(.toggle-dropdown2.active) + .dropdown-content-layer3{
+.dropdown-layer2:has(.toggle-dropdown2-navigation.active) + .dropdown-content-layer3{
   display: block;
 }
 
 .dropdown-content-layer4 {
   display: none;
 }
-.dropdown-layer3:has(.toggle-dropdown3.active) + .dropdown-content-layer4{
+.dropdown-layer3:has(.toggle-dropdown3-navigation.active) + .dropdown-content-layer4{
   display: block;
 }
 
@@ -116,7 +117,7 @@ header a:hover {
   display: none;
 }
 
-.dropdown-layer4:has(.toggle-dropdown4.active) + .dropdown-content-layer5{
+.dropdown-layer4:has(.toggle-dropdown4-navigation.active) + .dropdown-content-layer5{
   display: block;
 }
 
