@@ -77,7 +77,7 @@ header a:hover {
 }
 
 .header:has(.dropdown-content.active) .breadcrumbs-div {
-  border-top: 0.01px solid whitesmoke;
+  border-top: 0.01px solid red;
 }
 
 .dropdown-layer1 {
