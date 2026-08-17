@@ -110,7 +110,7 @@ navigation = [
 function navigationHeader() {
     let navigationHeaderHtml = "";
     for (const primaryLayer of navigation) {
-             navigationHeaderHtml += generateLayerNavigationHeader(navigation, 0);
+             navigationHeaderHtml += generateLayerNavigationHeader(primaryLayer, 0);
     }
     document.getElementById("dropdown-content-layer1").innerHTML = navigationHeaderHtml;
 
@@ -170,7 +170,7 @@ function generateLayerNavigationHeader(parent, parentLayer) {
             child += "</div>"
         if (i.children) {
             child += `<div class="dropdown-content-layer${currentLayer+1}-header">`
-            child += generateChildrenNavigationHeader(i, currentLayer);
+            child += generateLayerNavigationHeader(i, currentLayer);
             child += "</div>"
         }
 
