@@ -139,7 +139,7 @@ function navigationHeader() {
         }
 
     }
-    document.getElementById("dropdown-content-layer1").innerHTML = navigationHeaderHtml;
+    document.getElementById("dropdown-content").innerHTML = navigationHeaderHtml;
 
 
     document.querySelectorAll(".toggle-navigation").forEach(button => {
