@@ -6,57 +6,17 @@
     <meta name="robots" content="noindex">
     <title>Beteiligte Personen</title>
     <link rel=stylesheet href="/Operation_Walkuere/css/styles.css">
+    <script type="text/javascript" src="/Operation_Walkuere/javascript/javascript.js"></script>
 </head>
 
-<script>
-
-function getBreadCrumbs() {
-    let parts = window.location.pathname
-    .split("/")
-    .filter(Boolean);
-
-    basePath = "/Operation_Walkuere/"
-
-    let currentPath = basePath;
-    const paths = [basePath];
-
-    for (const part of parts.slice(1)) {
-    currentPath += part + "/";
-    paths.push(currentPath);
-    }
-
-    innerList = [];
-
-    for (let i = 0; i < paths.length; i++) {
-        innerList.push(`<li class="breadcrumbs-item"><a href="${paths[i]}" class="breadcrumbs-link">${formatName(parts[i])}</a></li>`);
-    }
-
-    let completeList = `<ul class="breadcrumbs">${innerList.join(" ")}</ul>`;
-    document.getElementById("breadcrumbs").innerHTML = completeList;
-}
-
-function formatName(part) {
-    if (breadcrumbMap[part]) {
-        return breadcrumbMap[part];
-    }
-
-    return part
-        .replace(/[-_]/g, " ")
-        .replace(/\.[^.]+$/, "")
-}
-
-const breadcrumbMap = {
-    "der_Attentatsversuch_am_20_Juli": "der Attentatsversuch am 20. Juli",
-    "Darstellungen_des_Attentatversuchs_in_der_Oeffentlichkeit": "Darstellungen des Attentatversuchs in der Öffentlichkeit",
-    "Operation_Walkuere": "Startseite"
-}
-
-</script>
-
-<body onload="getBreadCrumbs()">
+<body>
     <header>
     <div class="header-top">
-        <a href="/">Operation Walküre</a>
+        <a href="/" style="display: block;">Operation Walküre</a>
+        <button id="toggle-navigation" class="toggle-navigation">
+            v
+        </button>
+        <div id="navigation_header" class="navigation_header"></div>
     </div>
     <div id="breadcrumbs" class="breadcrumbs-div">
     </div>
@@ -67,24 +27,24 @@ const breadcrumbMap = {
 
 <div class="beteiligte_Personen">
 
-    <a href="Graf_Claus_Schenk_von_Stauffenberg/" class="full-size beteiligte_Personen_box">
+    <a href="Claus_Schenk_Graf_von_Stauffenberg/" class="full-size beteiligte_Personen_box">
         <img src="/Operation_Walkuere/assets/stauffenberg.jpg" alt="Stauffenberg" class="beteiligte_Personen_image stauffenberg_image">
         <div class="beteiligte_Personen_name">
-            Graf Claus Schenk von Stauffenberg
+            Claus Schenk Graf von Stauffenberg
         </div>
     </a>
 
-    <a href="General_Friedrich_Olbricht/" class="full-size beteiligte_Personen_box">
+    <a href="Friedrich_Olbricht/" class="full-size beteiligte_Personen_box">
         <img src="/Operation_Walkuere/assets/olbricht.jpg" alt="Olbricht" class="beteiligte_Personen_image olbricht_image">
         <div class="beteiligte_Personen_name">
-            General Friedrich Olbricht
+            Friedrich Olbricht
         </div>
     </a>
 
-    <a href="Generaloberst_Ludwig_Beck/" class="full-size beteiligte_Personen_box">
+    <a href="Ludwig_Beck/" class="full-size beteiligte_Personen_box">
         <img src="/Operation_Walkuere/assets/beck.jpg" alt="Beck" class="beteiligte_Personen_image beck_image">
         <div class="beteiligte_Personen_name">
-            Generaloberst Ludwig Beck
+            Ludwig Beck
         </div>
     </a>
 
@@ -95,10 +55,10 @@ const breadcrumbMap = {
         </div>
     </a>
 
-    <a href="Generalmajor_Henning_von_Tresckow/" class="full-size beteiligte_Personen_box">
+    <a href="Henning_von_Tresckow/" class="full-size beteiligte_Personen_box">
         <img src="/Operation_Walkuere/assets/tresckow.jpg" alt="Tresckow" class="beteiligte_Personen_image tresckow_image">
         <div class="beteiligte_Personen_name">
-            Generalmajor Henning von Tresckow
+            Henning von Tresckow
         </div>
     </a>
 
@@ -152,3 +112,8 @@ const breadcrumbMap = {
     Geschichte GK 12 2026/27 &nbsp; &nbsp;
 </footer>
 </body>
+
+<script>
+    getBreadCrumbs();
+    navigationHeader();
+</script>

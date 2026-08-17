@@ -6,57 +6,17 @@
     <meta name="robots" content="noindex">
     <title>Generaloberst Ludwig Beck</title>
     <link rel=stylesheet href="/Operation_Walkuere/css/styles.css">
+    <script type="text/javascript" src="/Operation_Walkuere/javascript/javascript.js"></script>
 </head>
 
-<script>
-
-function getBreadCrumbs() {
-    let parts = window.location.pathname
-    .split("/")
-    .filter(Boolean);
-
-    basePath = "/Operation_Walkuere/"
-
-    let currentPath = basePath;
-    const paths = [basePath];
-
-    for (const part of parts.slice(1)) {
-    currentPath += part + "/";
-    paths.push(currentPath);
-    }
-
-    innerList = [];
-
-    for (let i = 0; i < paths.length; i++) {
-        innerList.push(`<li class="breadcrumbs-item"><a href="${paths[i]}" class="breadcrumbs-link">${formatName(parts[i])}</a></li>`);
-    }
-
-    let completeList = `<ul class="breadcrumbs">${innerList.join(" ")}</ul>`;
-    document.getElementById("breadcrumbs").innerHTML = completeList;
-}
-
-function formatName(part) {
-    if (breadcrumbMap[part]) {
-        return breadcrumbMap[part];
-    }
-
-    return part
-        .replace(/[-_]/g, " ")
-        .replace(/\.[^.]+$/, "")
-}
-
-const breadcrumbMap = {
-    "der_Attentatsversuch_am_20_Juli": "der Attentatsversuch am 20. Juli",
-    "Darstellungen_des_Attentatversuchs_in_der_Oeffentlichkeit": "Darstellungen des Attentatversuchs in der Öffentlichkeit",
-    "Operation_Walkuere": "Startseite"
-}
-
-</script>
-
-<body onload="getBreadCrumbs()">
+<body>
     <header>
     <div class="header-top">
-        <a href="/">Operation Walküre</a>
+        <a href="/" style="display: block;">Operation Walküre</a>
+        <button id="toggle-navigation" class="toggle-navigation">
+            v
+        </button>
+        <div id="navigation_header" class="navigation_header"></div>
     </div>
     <div id="breadcrumbs" class="breadcrumbs-div">
     </div>
@@ -69,3 +29,8 @@ const breadcrumbMap = {
     Geschichte GK 12 2026/27 &nbsp; &nbsp;
 </footer>
 </body>
+
+<script>
+    getBreadCrumbs();
+    navigationHeader();
+</script>
