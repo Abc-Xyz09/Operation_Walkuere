@@ -48,6 +48,9 @@ header a:hover {
 
 
 /* #region navigation */
+.dropdown-content {
+  display: flex;
+}
 
 .toggle-navigation {
   background-color: #0000;
@@ -99,6 +102,7 @@ header a:hover {
 
 .dropdown-content button {
   border: none;
+  margin-left: auto;
   background-color: rgba(0,0,0,0);
 }
 
