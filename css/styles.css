@@ -6,7 +6,7 @@ body {
   font-weight: 400;
   margin: 0;
   padding: 0;
-  background-color: rgba(50, 50, 60, 0.3);
+  background-color: rgba(50, 50, 60, 0.45);
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -96,6 +96,7 @@ header a:hover {
   color: black;
   flex-grow: 1;
   flex-direction: column;
+  background-color: rgbs(255, 255, 255, 0.15);
 }
 
 .content li {
