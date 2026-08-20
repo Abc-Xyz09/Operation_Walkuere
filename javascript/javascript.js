@@ -101,7 +101,7 @@ navigation = [
 
     {
         title: "Quellen",
-        url: "/Operation_Walkuere/quellen"
+        url: "/Operation_Walkuere/Quellen"
     }
 ]
 
