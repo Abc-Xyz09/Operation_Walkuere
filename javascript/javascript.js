@@ -75,18 +75,18 @@ navigation = [
         children: [
             {
                 title: "Claus Schenk Graf von Stauffenberg",
-                url: "/Operation_Walkuere/Claus_Schenk_Graf_von_Stauffenberg/",
+                url: "/Operation_Walkuere/beteiligte_Personen/Claus_Schenk_Graf_von_Stauffenberg/",
                 children: [
-                    {title: "Kontroverse", url: "/Operation_Walkuere/Claus_Schenk_Graf_von_Stauffenberg/#Kontroverse"}
+                    {title: "Kontroverse", url: "/Operation_Walkuere/beteiligte_Personen/Claus_Schenk_Graf_von_Stauffenberg/#Kontroverse"}
                 ]
             },
-            {title: "Friedrich Olbricht", url: "/Operation_Walkuere/Friedrich_Olbricht/"},
-            {title: "Ludwig Beck", url: "/Operation_Walkuere/Ludwig_Beck/"},
-            {title: "Albrecht Ritter Mertz von Quirnheim", url: "/Operation_Walkuere/Albrecht_Ritter_Mertz_von_Quirnheim/"},
-            {title: "Henning von Tresckow", url: "/Operation_Walkuere/Henning_von_Tresckow/"},
-            {title: "Carl Friedrich Goerdeler", url: "/Operation_Walkuere/Carl_Friedrich_Goerdeler/"},
-            {title: "Werner von Haeften", url: "/Operation_Walkuere/Werner_von_Haeften/"},
-            {title: "Erich Hoepner", url: "/Operation_Walkuere/Erich_Hoepner/"}
+            {title: "Friedrich Olbricht", url: "/Operation_Walkuere/beteiligte_Personen/Friedrich_Olbricht/"},
+            {title: "Ludwig Beck", url: "/Operation_Walkuere/beteiligte_Personen/Ludwig_Beck/"},
+            {title: "Albrecht Ritter Mertz von Quirnheim", url: "/Operation_Walkuere/beteiligte_Personen/Albrecht_Ritter_Mertz_von_Quirnheim/"},
+            {title: "Henning von Tresckow", url: "/Operation_Walkuere/beteiligte_Personen/Henning_von_Tresckow/"},
+            {title: "Carl Friedrich Goerdeler", url: "/Operation_Walkuere/beteiligte_Personen/Carl_Friedrich_Goerdeler/"},
+            {title: "Werner von Haeften", url: "/Operation_Walkuere/beteiligte_Personen/Werner_von_Haeften/"},
+            {title: "Erich Hoepner", url: "/Operation_Walkuere/beteiligte_Personen/Erich_Hoepner/"}
         ]
     },
 
