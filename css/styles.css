@@ -70,6 +70,42 @@ header a:hover {
   color: whitesmoke;
 }
 
+.dropdown-content-layer2 a{
+  color: hsl(0, 0%, 90%);
+  margin-left: 5px;
+}
+
+.dropdown-content a:visited {
+  color: hsl(0, 0%, 90%);
+}
+
+.dropdown-content a{
+  color: hsl(0, 0%, 84%);
+  margin-left: 5px;
+}
+
+.dropdown-content a:visited {
+  color: hsl(0, 0%, 84%);
+}
+
+.dropdown-content a{
+  color: hsl(0, 0%, 78%);
+  margin-left: 5px;
+}
+
+.dropdown-content a:visited {
+  color: hsl(0, 0%, 78%);
+}
+
+.dropdown-content a{
+  color: hsl(0, 0%, 72%);
+  margin-left: 5px;
+}
+
+.dropdown-content a:visited {
+  color: hsl(0, 0%, 72%);
+}
+
 .dropdown-layer1, .dropdown-layer2, .dropdown-layer3, .dropdown-layer4, .dropdown-layer5 {
   width: 100%;
   display: flex;
