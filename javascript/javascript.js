@@ -1,11 +1,11 @@
-console.log("navigation.js loaded");
+console.log("navigation.js loaded"); // debugging
 
 function getBreadCrumbs() {
     let parts = window.location.pathname
     .split("/")
     .filter(Boolean);
 
-    basePath = "/Operation_Walkuere/"
+    const basePath = "/Operation_Walkuere/"
 
     let currentPath = basePath;
     const paths = [basePath];
@@ -15,7 +15,7 @@ function getBreadCrumbs() {
     paths.push(currentPath);
     }
 
-    innerList = [];
+    let innerList = [];
 
     for (let i = 0; i < paths.length; i++) {
         innerList.push(`<li class="breadcrumbs-item"><a href="${paths[i]}" class="breadcrumbs-link">${formatName(parts[i])}</a></li>`);
@@ -24,6 +24,8 @@ function getBreadCrumbs() {
     let completeList = `<ul class="breadcrumbs">${innerList.join(" ")}</ul>`;
     document.getElementById("breadcrumbs").innerHTML = completeList;
 }
+
+console.log("getBreadCrumbs loaded"); //debugging
 
 function formatName(part) {
     if (breadcrumbMap[part]) {
@@ -35,11 +37,15 @@ function formatName(part) {
         .replace(/\.[^.]+$/, "")
 }
 
+console.log("formatName loaded") //debugging
+
 const breadcrumbMap = {
     "der_Attentatsversuch_am_20_Juli": "der Attentatsversuch am 20. Juli",
     "Darstellungen_des_Attentatversuchs_in_der_Oeffentlichkeit": "Darstellungen des Attentatversuchs in der Öffentlichkeit",
     "Operation_Walkuere": "Startseite"
 };
+
+console.log("breadcrumbs loaded") //debugging
 
 const navigation = [
 
