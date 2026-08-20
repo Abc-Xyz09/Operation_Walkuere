@@ -39,7 +39,7 @@ const breadcrumbMap = {
     "der_Attentatsversuch_am_20_Juli": "der Attentatsversuch am 20. Juli",
     "Darstellungen_des_Attentatversuchs_in_der_Oeffentlichkeit": "Darstellungen des Attentatversuchs in der Öffentlichkeit",
     "Operation_Walkuere": "Startseite"
-}
+};
 
 const navigation = [
 
