@@ -63,6 +63,7 @@ header a:hover {
 
 .dropdown-content a{
   color: whitesmoke;
+  margin-left: 5px;
 }
 
 .dropdown-content a:visited {
@@ -97,9 +98,10 @@ header a:hover {
 }
 
 .dropdown-content .icon-arrow svg {
-  border: 1px solid black;
+  border: 1px solid whitesmoke;
   padding: 3px;
   width: 15px;
+  fill: whitesmoke;
 }
 
 .dropdown-content button {
