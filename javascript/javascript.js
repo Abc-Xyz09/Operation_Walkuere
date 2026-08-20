@@ -1,4 +1,4 @@
-console.log("navigation.js loaded"); // debugging
+// console.log("navigation.js loaded"); // debugging
 
 function getBreadCrumbs() {
     let parts = window.location.pathname
@@ -25,7 +25,7 @@ function getBreadCrumbs() {
     document.getElementById("breadcrumbs").innerHTML = completeList;
 }
 
-console.log("getBreadCrumbs loaded"); //debugging
+// console.log("getBreadCrumbs loaded"); //debugging
 
 function formatName(part) {
     if (breadcrumbMap[part]) {
@@ -37,7 +37,7 @@ function formatName(part) {
         .replace(/\.[^.]+$/, "")
 }
 
-console.log("formatName loaded"); //debugging
+// console.log("formatName loaded"); //debugging
 
 const breadcrumbMap = {
     "der_Attentatsversuch_am_20_Juli": "der Attentatsversuch am 20. Juli",
@@ -45,7 +45,7 @@ const breadcrumbMap = {
     "Operation_Walkuere": "Startseite"
 };
 
-console.log("breadcrumbsMap loaded"); //debugging
+// console.log("breadcrumbsMap loaded"); //debugging
 
 const navigation = [
 
