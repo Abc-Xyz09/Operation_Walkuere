@@ -1,3 +1,5 @@
+console.log("navigation.js loaded");
+
 function getBreadCrumbs() {
     let parts = window.location.pathname
     .split("/")
@@ -39,7 +41,7 @@ const breadcrumbMap = {
     "Operation_Walkuere": "Startseite"
 }
 
-navigation = [
+const navigation = [
 
     {
         title: "to-do",
@@ -138,6 +140,10 @@ function navigationHeader() {
         }
 
     }
+    //debugging:
+    console.log("dropdown-content:", document.getElementById("dropdown-content"));
+    console.log("generated HTML:", navigationHeaderHtml);
+
     navigationHeaderHtml += "</div>"
     document.getElementById("dropdown-content").innerHTML = navigationHeaderHtml;
 
