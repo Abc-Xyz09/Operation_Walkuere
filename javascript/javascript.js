@@ -119,6 +119,9 @@ const navigation = [
 console.log("navigation list loaded"); //debugging
 
 function navigationHeader() {
+
+    console.log("navigation's been calle"); //debugging
+
     let navigationHeaderHtml = "<div class=\"dropdown-content-layer1\">";
     for (const i of navigation) {
                 navigationHeaderHtml +=  `
@@ -184,6 +187,7 @@ function navigationHeader() {
 
 }
 
+console.log("navigationHeader loaded (.js)"); //debugging
 
 function generateLayerNavigationHeader(parent, parentLayer) {
     let currentLayer = parentLayer + 1;
@@ -220,3 +224,5 @@ function generateLayerNavigationHeader(parent, parentLayer) {
     }
     return child;
 }
+
+console.log("generate Children loaded (.js)") //debugging
