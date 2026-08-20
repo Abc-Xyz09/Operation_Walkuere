@@ -37,7 +37,7 @@ function formatName(part) {
         .replace(/\.[^.]+$/, "")
 }
 
-console.log("formatName loaded") //debugging
+console.log("formatName loaded"); //debugging
 
 const breadcrumbMap = {
     "der_Attentatsversuch_am_20_Juli": "der Attentatsversuch am 20. Juli",
@@ -45,7 +45,7 @@ const breadcrumbMap = {
     "Operation_Walkuere": "Startseite"
 };
 
-console.log("breadcrumbs loaded") //debugging
+console.log("breadcrumbsMap loaded"); //debugging
 
 const navigation = [
 
@@ -113,6 +113,7 @@ const navigation = [
     }
 ];
 
+console.log("navigation list loaded"); //debugging
 
 function navigationHeader() {
     let navigationHeaderHtml = "<div class=\"dropdown-content-layer1\">";
