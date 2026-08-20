@@ -236,7 +236,7 @@ header a:hover {
   text-decoration: none;
 }
 
-.content a:link {
+.content a {
   color: hsl(240, 30%, 50%);
   text-decoration: none;
 }
@@ -262,13 +262,9 @@ header a:hover {
   border: 2px solid rgba(50, 50, 60, 0.6);
 }
 
-.table-of-contents a {
+.table-of-contents a, .table-of-contents a:visited {
   color: black;
   text-decoration: underline;
-}
-
-.table-of-contents a:visited {
-  color: black;
 }
 /* #endregion*/
 
