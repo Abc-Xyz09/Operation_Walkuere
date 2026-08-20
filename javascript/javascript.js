@@ -105,7 +105,7 @@ const navigation = [
         title: "Quellen",
         url: "/Operation_Walkuere/Quellen"
     }
-]
+];
 
 
 function navigationHeader() {
