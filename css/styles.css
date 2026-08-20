@@ -62,11 +62,11 @@ header a:hover {
 }
 
 .dropdown-content a{
-  color: black;
+  color: whitesmoke;
 }
 
 .dropdown-content a:visited {
-  color: black;
+  color: whitesmoke;
 }
 
 .dropdown-layer1, .dropdown-layer2, .dropdown-layer3, .dropdown-layer4, .dropdown-layer5 {
@@ -77,23 +77,23 @@ header a:hover {
 }
 
 .header:has(.dropdown-content.active) .breadcrumbs-div {
-  border-top: 0.01px solid red;
+  border-top: 0.01px solid whitesmoke;
 }
 
 .dropdown-layer1 {
-  background-color: hsl(240, 10%, 32%);
+  background-color: hsl(240, 10%, 40%);
 }
 .dropdown-layer2 {
   background-color: hsl(240, 10%, 34%);
 }
-.dropdown-layer1 {
-  background-color: hsl(240, 10%, 36%);
+.dropdown-layer3 {
+  background-color: hsl(240, 10%, 28%);
 }
-.dropdown-layer1 {
-  background-color: hsl(240, 10%, 38%);
+.dropdown-layer4 {
+  background-color: hsl(240, 10%, 22%);
 }
-.dropdown-layer1 {
-  background-color: hsl(240, 10%, 40%);
+.dropdown-layer15{
+  background-color: hsl(240, 10%, 16%);
 }
 
 .dropdown-content .icon-arrow svg {
@@ -117,7 +117,7 @@ header a:hover {
   display: none;
 }
 
-.dropdown-content-layer1.active {
+.dropdown-content.active .dropdown-content-layer1 {
   display: block;
 }
 

@@ -108,7 +108,7 @@ navigation = [
 
 
 function navigationHeader() {
-    let navigationHeaderHtml = "";
+    let navigationHeaderHtml = "<div class=\"dropdown-content-layer1\">";
     for (const i of navigation) {
                 navigationHeaderHtml +=  `
 
@@ -139,6 +139,7 @@ function navigationHeader() {
         }
 
     }
+    navigationHeaderHtml += "</div>"
     document.getElementById("dropdown-content").innerHTML = navigationHeaderHtml;
 
 
