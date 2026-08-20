@@ -82,7 +82,6 @@ navigation = [
             },
             {title: "Friedrich Olbricht", url: "/Operation_Walkuere/Friedrich_Olbricht/"},
             {title: "Ludwig Beck", url: "/Operation_Walkuere/Ludwig_Beck/"},
-            {title: "Ludwig Beck", url: "/Operation_Walkuere/Ludwig_Beck/"},
             {title: "Albrecht Ritter Mertz von Quirnheim", url: "/Operation_Walkuere/Albrecht_Ritter_Mertz_von_Quirnheim/"},
             {title: "Henning von Tresckow", url: "/Operation_Walkuere/Henning_von_Tresckow/"},
             {title: "Carl Friedrich Goerdeler", url: "/Operation_Walkuere/Carl_Friedrich_Goerdeler/"},
