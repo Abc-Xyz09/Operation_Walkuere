@@ -61,48 +61,27 @@ header a:hover {
   height: 25px;
 }
 
-.dropdown-content a{
+.dropdown-content a, .dropdown-content a:visited{
   color: whitesmoke;
   margin-left: 5px;
+  text-decoration: none;
 }
 
-.dropdown-content a:visited {
-  color: whitesmoke;
-}
-
-.dropdown-content-layer2 a{
-  color: hsl(0, 0%, 90%);
-  margin-left: 5px;
-}
-
-.dropdown-content a:visited {
+.dropdown-content-layer2 a, .dropdown-content-layer2 a:visited {
   color: hsl(0, 0%, 90%);
 }
 
-.dropdown-content a{
-  color: hsl(0, 0%, 84%);
-  margin-left: 5px;
-}
-
-.dropdown-content a:visited {
+.dropdown-content-layer3 a, .dropdown-content-layer3 a:visited{
   color: hsl(0, 0%, 84%);
 }
 
-.dropdown-content a{
-  color: hsl(0, 0%, 78%);
-  margin-left: 5px;
-}
-
-.dropdown-content a:visited {
+.dropdown-content-layer4 a, .dropdown-content-layer4 a:visited{
   color: hsl(0, 0%, 78%);
 }
 
-.dropdown-content a{
-  color: hsl(0, 0%, 72%);
-  margin-left: 5px;
-}
 
-.dropdown-content a:visited {
+
+.dropdown-content-layer5 a, .dropdown-content-layer5 a:visited{
   color: hsl(0, 0%, 72%);
 }
 
