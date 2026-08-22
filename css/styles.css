@@ -90,7 +90,7 @@ header a:hover {
   padding: 5px;
 }
 
-.header:has(.dropdown-content.active) .breadcrumbs-div {
+header:has(.dropdown-content.active) .breadcrumbs-div {
   border-top: 0.01px solid whitesmoke;
 }
 
