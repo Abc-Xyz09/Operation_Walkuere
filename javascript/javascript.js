@@ -1,5 +1,3 @@
-// console.log("navigation.js loaded"); // debugging
-
 function getBreadCrumbs() {
 
     console.log("BreadCrumbs being called, yay!"); //debugging
@@ -28,8 +26,6 @@ function getBreadCrumbs() {
     document.getElementById("breadcrumbs").innerHTML = completeList;
 }
 
-// console.log("getBreadCrumbs loaded"); //debugging
-
 function formatName(part) {
     if (breadcrumbMap[part]) {
         return breadcrumbMap[part];
@@ -40,15 +36,12 @@ function formatName(part) {
         .replace(/\.[^.]+$/, "")
 }
 
-// console.log("formatName loaded"); //debugging
-
 const breadcrumbMap = {
     "der_Attentatsversuch_am_20_Juli": "der Attentatsversuch am 20. Juli",
     "Darstellungen_des_Attentatversuchs_in_der_Oeffentlichkeit": "Darstellungen des Attentatversuchs in der Öffentlichkeit",
     "Operation_Walkuere": "Startseite"
 };
 
-// console.log("breadcrumbsMap loaded"); //debugging
 
 const navigation = [
 
@@ -92,12 +85,37 @@ const navigation = [
                 ]
             },
             {title: "Friedrich Olbricht", url: "/Operation_Walkuere/beteiligte_Personen/Friedrich_Olbricht/"},
-            {title: "Ludwig Beck", url: "/Operation_Walkuere/beteiligte_Personen/Ludwig_Beck/"},
-            {title: "Albrecht Ritter Mertz von Quirnheim", url: "/Operation_Walkuere/beteiligte_Personen/Albrecht_Ritter_Mertz_von_Quirnheim/"},
+            {
+                title: "Ludwig Beck",
+                url: "/Operation_Walkuere/beteiligte_Personen/Ludwig_Beck/",
+                children: [
+                    {title: "Werdegang", url: "/Operation_Walkuere/beteiligte_Personen/Ludwig_Beck/#Werdegang"},
+                    {title: "Rolle bei \"Walküre\"", url: "/Operation_Walkuere/beteiligte_Personen/Ludwig_Beck/#Rolle_bei_Walkuere"},
+                    {title: "Haltung und Folgen", url: "/Operation_Walkuere/beteiligte_Personen/Ludwig_Beck/#Haltung_und_Folgen"}
+                ]
+            },
+            {
+                title: "Albrecht Ritter Mertz von Quirnheim",
+                url: "/Operation_Walkuere/beteiligte_Personen/Albrecht_Ritter_Mertz_von_Quirnheim/",
+                children: [
+                    {title: "Werdegang", url: "/Operation_Walkuere/beteiligte_Personen/Albrecht_Ritter_Mertz_von_Quirnheim/#Werdegang"},
+                    {title: "Motivation", url: "/Operation_Walkuere/beteiligte_Personen/Albrecht_Ritter_Mertz_von_Quirnheim/#Motivation"},
+                    {title: "Rolle bei \"Walküre\"", url: "/Operation_Walkuere/beteiligte_Personen/Albrecht_Ritter_Mertz_von_Quirnheim/#Rolle_bei_Walkuere"},
+                    {title: "Folgen", url: "/Operation_Walkuere/beteiligte_Personen/Albrecht_Ritter_Mertz_von_Quirnheim/#Folgen"}
+                ]
+            },
             {title: "Henning von Tresckow", url: "/Operation_Walkuere/beteiligte_Personen/Henning_von_Tresckow/"},
             {title: "Carl Friedrich Goerdeler", url: "/Operation_Walkuere/beteiligte_Personen/Carl_Friedrich_Goerdeler/"},
             {title: "Werner von Haeften", url: "/Operation_Walkuere/beteiligte_Personen/Werner_von_Haeften/"},
-            {title: "Erich Hoepner", url: "/Operation_Walkuere/beteiligte_Personen/Erich_Hoepner/"}
+            {
+                title: "Erich Hoepner",
+                url: "/Operation_Walkuere/beteiligte_Personen/Erich_Hoepner/",
+                children: [
+                    {title: "Werdegang", url: "/Operation_Walkuere/beteiligte_Personen/Erich_Hoepner/#Werdegang"},
+                    {title: "Rolle bei \"Walküre\"", url: "/Operation_Walkuere/beteiligte_Personen/Erich_Hoepner/#Rolle_bei_Walkuere"},
+                    {title: "Folgen", url: "/Operation_Walkuere/beteiligte_Personen/Erich_Hoepner/#Folgen"}
+                ]
+            }
         ]
     },
 
@@ -116,7 +134,6 @@ const navigation = [
     }
 ];
 
-console.log("navigation list loaded"); //debugging
 
 function navigationHeader() {
 
@@ -187,8 +204,6 @@ function navigationHeader() {
 
 }
 
-console.log("navigationHeader loaded (.js)"); //debugging
-
 function generateLayerNavigationHeader(parent, parentLayer) {
     let currentLayer = parentLayer + 1;
     let child = "";
@@ -224,5 +239,3 @@ function generateLayerNavigationHeader(parent, parentLayer) {
     }
     return child;
 }
-
-console.log("generate Children loaded (.js)") //debugging
