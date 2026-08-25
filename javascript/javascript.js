@@ -84,7 +84,16 @@ const navigation = [
                     {title: "Kontroverse", url: "/Operation_Walkuere/beteiligte_Personen/Claus_Schenk_Graf_von_Stauffenberg/#Kontroverse"}
                 ]
             },
-            {title: "Friedrich Olbricht", url: "/Operation_Walkuere/beteiligte_Personen/Friedrich_Olbricht/"},
+            {
+                title: "Friedrich Olbricht",
+                url: "/Operation_Walkuere/beteiligte_Personen/Friedrich_Olbricht/",
+                children:[
+                    {title: "Werdegang", url: "/Operation_Walkuere/beteiligte_Personen/Friedrich_Olbricht/#Werdegang"},
+                    {title: "Motivation", url: "/Operation_Walkuere/beteiligte_Personen/Friedrich_Olbricht/#Motivation"},
+                    {title: "Rolle bei \"Walküre\"", url: "/Operation_Walkuere/beteiligte_Personen/Friedrich_Olbricht/#Rolle"},
+                    {title: "Folgen", url:"/Operation_Walkuere/beteiligte_Personen/Friedrich_Olbricht/#Folgen"}
+                ]
+            },
             {
                 title: "Ludwig Beck",
                 url: "/Operation_Walkuere/beteiligte_Personen/Ludwig_Beck/",
@@ -104,9 +113,35 @@ const navigation = [
                     {title: "Folgen", url: "/Operation_Walkuere/beteiligte_Personen/Albrecht_Ritter_Mertz_von_Quirnheim/#Folgen"}
                 ]
             },
-            {title: "Henning von Tresckow", url: "/Operation_Walkuere/beteiligte_Personen/Henning_von_Tresckow/"},
-            {title: "Carl Friedrich Goerdeler", url: "/Operation_Walkuere/beteiligte_Personen/Carl_Friedrich_Goerdeler/"},
-            {title: "Werner von Haeften", url: "/Operation_Walkuere/beteiligte_Personen/Werner_von_Haeften/"},
+            {
+                title: "Henning von Tresckow",
+                url: "/Operation_Walkuere/beteiligte_Personen/Henning_von_Tresckow/",
+                children: [
+                    {title: "Werdegang", url:"/Operation_Walkuere/beteiligte_Personen/Henning_von_Tresckow/#Werdegang"},
+                    {title: "Motivation", url: "/Operation_Walkuere/beteiligte_Personen/Henning_von_Tresckow/#Motivation"},
+                    {title: "Rolle im Widerstand und bei \"Walküre\"", url: "/Operation_Walkuere/beteiligte_Personen/Henning_von_Tresckow/#Rolle"},
+                    {title: "Folgen", url: "/Operation_Walkuere/beteiligte_Personen/Henning_von_Tresckow/#Folgen"}
+                ]
+            },
+            {
+                title: "Carl Friedrich Goerdeler",
+                url: "/Operation_Walkuere/beteiligte_Personen/Carl_Friedrich_Goerdeler/",
+                children: [
+                    {title: "Werdegang", url: "/Operation_Walkuere/beteiligte_Personen/Carl_Friedrich_Goerdeler/#Werdegang"},
+                    {title: "Mortivation", url: "/Operation_Walkuere/beteiligte_Personen/Carl_Friedrich_Goerdeler/#Motivation"},
+                    {title: "Rolle beim Widerstand und bei \"Walküre\"", url: "/Operation_Walkuere/beteiligte_Personen/Carl_Friedrich_Goerdeler/#Rolle"},
+                    {title: "Folgen", url: "/Operation_Walkuere/beteiligte_Personen/Carl_Friedrich_Goerdeler/#Folgen"}
+                ]
+            },
+            {
+                title: "Werner von Haeften",
+                url: "/Operation_Walkuere/beteiligte_Personen/Werner_von_Haeften/",
+                children: [
+                    {title: "Werdegang", url:"/Operation_Walkuere/beteiligte_Personen/Werner_von_Haeften/#Werdegang"},
+                    {title: "Motivation", url: "/Operation_Walkuere/beteiligte_Personen/Werner_von_Haeften/#Motivation"},
+                    {title: "Folgen", url: "/Operation_Walkuere/beteiligte_Personen/Werner_von_Haeften/#Folgen"}
+                ]
+            },
             {
                 title: "Erich Hoepner",
                 url: "/Operation_Walkuere/beteiligte_Personen/Erich_Hoepner/",
