@@ -46,11 +46,6 @@ const breadcrumbMap = {
 const navigation = [
 
     {
-        title: "to-do",
-        url: "/Operation_Walkuere/to-do"
-    },
-
-    {
         title: "Operation Walküre",
         url: "/Operation_Walkuere",
         children: [
