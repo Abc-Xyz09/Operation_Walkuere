@@ -45,12 +45,14 @@
     .img-right {
         padding-left: 50px;
         padding-bottom: 1em;
+        height: 200px;
     }
 
     .img-left {
         float: left;
         padding-right: 30px;
         padding-bottom: 1em;
+        height: 200px;
     }
 
     .img-frame p,
@@ -72,7 +74,16 @@
         position: fixed;
         width: 100vw;
         height: 100vh;
+        inset: 0;
         background-color: rgb(50, 50, 60);
+        float: none;
+    }
+
+    .img-frame.active > img {
+        max-width: 80vw;
+        max-height: 80vh;
+        padding: 0;
+        float: none;
     }
 
     .img-frame.active p,
@@ -87,12 +98,14 @@
 
     .img-frame.active .gallery-image.current {
         display: flex;
+        flex-direction: row;
 
         width: 100%;
         height: 100%;
 
         justify-content: center;
         align-items: center;
+
     }
 
 
@@ -239,7 +252,6 @@
     <button class="close-img-fullscreen">x</button>
 <p><img src="/Operation_Walkuere/assets/Umsetzung.png" alt="placeholder" class="img-right">
 <p>description</p></p>
-<p></div></p>
 </div>
 <p>Bereits vor Stauffenbergs Attentatsversuch auf Hitler gab es zahlreiche Attentatsversuche auf den Diktator, welche teilweise von der selben Widerstandsgruppe ausgingen, die auch für Operation Walküre verantwortlich war.</p>
 <p>Die letzte Version der Operation sah vor, das Stauffenberg das <a href="/Operation_Walkuere/der_Attentatsversuch_am_20_Juli/">Attentat</a> auf Hitler während einer Lagebesprechung ausführen sollte.</p>
