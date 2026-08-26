@@ -24,7 +24,66 @@
     </div>
 </header> 
     <div class="content">
-        <h2>Der Stauffenberg-Putsch und Operation Walküre</h2>
+        <style>
+    .img-frame {
+        display: flex;
+        width: fit-content;
+        height: fit-content;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .img-right {
+        float: right;
+        padding-left: 50px;
+        padding-bottom: 1em;
+    }
+
+    .img-left {
+        float: left;
+        padding-right: 30px;
+        padding-bottom: 1em;
+    }
+
+    .img-frame p, .img-frame button {
+        display: none;
+    }
+
+    .img-frame button {
+        position: absolute;
+        top: 25px;
+        bottom: 25px;
+    }
+
+    .img-frame.active {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(50, 50, 60);
+    }
+
+    .img-frame.img-frame.active p, .img-frame.img-frame.active button {
+        display: box;
+    }
+
+    @media (max-width: 600px){
+        .img-frame {
+            width: 100%;
+        }
+
+        .img-right {
+            padding-left: 0px;
+        }
+
+        .img-left {
+            padding-right: 0px;
+        }
+
+    }
+
+
+</style>
+<h2>Der Stauffenberg-Putsch und Operation Walküre</h2>
 <p>Operation Walküre war ein von langer Hand geplanter Versuch, Hitler und das Naziregime zu stürzen. Hunderte von Menschen aus unter anderem dem Militär und der Politik hatten daran teil.</p>
 <p>Doch was genau passierte dabei eigentlich?</p>
 <div class="table-of-contents">
@@ -47,7 +106,11 @@
 <p>Auch der Zweite Weltkrieg sollte möglichst schnell beendet werden.</p>
 <p><a name="Die_Operation"></a></p>
 <h3>Die Operation</h3>
-<img src="https://placehold.co/200x200/0000B0/BBBBF0" alt="placeholder" style="float: right; padding-left: 50px; padding-bottom: 1em;">
+<div class="img-frame">
+    <button class="close-img-fullscreen">x</button>
+    <img src="https://placehold.co/200x200/0000B0/BBBBF0" alt="placeholder" class="img-right">
+    <p>description</p>
+</div>
 <!--ein Bild-->
 <p>„Walküre“ war nach offizieller Lesart ein Notfallplan des NS-Regimes, welcher bei Aufständen oder Unruhen im Reich eingesetzt werden sollte.</p>
 <p>Das Ersatzheer sollte dann wichtige Gebäude sichern, verdächtige Personen verhaften und die Ordnung wiederherstellen.</p>
@@ -56,7 +119,10 @@
 <p><a name="Die_geplante_Umsetzung"></a></p>
 <h3>Die geplante Umsetzung</h3>
 <!--ein Bild – beweglich?-->
-<img src="https://placehold.co/200x200/0000B0/BBBBF0" alt="placeholder" style="float: left; padding-right: 30px; padding-bottom: 1em;">
+<div class="img-frame">
+    <img src="https://placehold.co/200x200/0000B0/BBBBF0" alt="placeholder" class="img-left">
+    <p>description</p>
+</div>
 <p>Bereits vor Stauffenbergs Attentatsversuch auf Hitler gab es zahlreiche Attentatsversuche auf den Diktator, welche teilweise von der selben Widerstandsgruppe ausgingen, die auch für Operation Walküre verantwortlich war.</p>
 <p>Die letzte Version der Operation sah vor, das Stauffenberg das <a href="/Operation_Walkuere/der_Attentatsversuch_am_20_Juli/">Attentat</a> auf Hitler während einer Lagebesprechung ausführen sollte.</p>
 <p>Direkt im Anschluss sollte „Walküre“ ausgelöst werden.</p>
@@ -66,7 +132,10 @@
 <p><a name="Das_Attentat_am_20_Juli_1944"></a></p>
 <h3>Das Attentat am 20. Juli 1944</h3>
 <!--ein Bild – beweglich?-->
-<img src="https://placehold.co/200x200/0000B0/BBBBF0" alt="placeholder" style="float: right; padding-left: 50px; padding-bottom: 1em;">
+<div class="img-frame">
+    <img src="https://placehold.co/200x200/0000B0/BBBBF0" alt="placeholder" class="img-right">
+    <p>description</p>
+</div>
 <p>Stauffenberg reiste zu einer Lagebesprechung zur „Wolfsschanze“ in Ostpreußen.  Hier, im Besprechungsraum nahe Hitlers, platzierte er eine Bombe in einer Aktentasche.</p>
 <p>Kurz darauf verließ Stauffenberg den Raum, bevor gegen Mittag die Bombe explodierte.</p>
 <p>Dabei wurden mehrere Personen getötet oder verletzt.</p>
@@ -77,27 +146,39 @@
 <p><a name="Die_Ausfuehrung_von_Operation_Walkuere"></a></p>
 <h3>Die Ausführung von Operation Walküre</h3>
 <!--ein Bild – beweglich?-->
-<img src="https://placehold.co/200x200/0000B0/BBBBF0" alt="placeholder" style="float: left; padding-right: 30px; padding-bottom: 1em;">
+<div class="img-frame">
+    <img src="https://placehold.co/200x200/0000B0/BBBBF0" alt="placeholder" class="img-left">
+    <p>description</p>
+</div>
 <p>Nach dem Attentatsversuch sendeten die Verschwörer eine Nachricht nach Berlin. Zu diesem Zeitpunkt war allerdings noch unklar, ob Hitler überlebt hatte.</p>
 <p>Olbricht zögerte deshalb zunächst, den &quot;Walküre&quot;-Alarm auszulösen, auch weil sich ein neuerliches Auslösen nicht mehr vertuschen lassen würde. So ging Zeit verloren, die für die Festnahme von zum Beispiel Goebbels und Göring sowie für die Übernahme des Rundfunks gebraucht wurde.</p>
 <p>Auf Drängen Quirnheims, und da Stauffenberg zunächst glaubte, dass Hitler tatsächlich tot sei, hin wurde der Alarm letzten Endes allerdings dennoch ausgelöst.</p>
 <p><a name="Gruende_fuer_das_Scheitern"></a></p>
 <h3>Gründe für das Scheitern</h3>
 <!--ein Bild -->
-<img src="https://placehold.co/200x200/0000B0/BBBBF0" alt="placeholder" style="float: right; padding-left: 50px; padding-bottom: 1em;">
+<div class="img-frame">
+    <img src="https://placehold.co/200x200/0000B0/BBBBF0" alt="placeholder" class="img-right">
+    <p>description</p>
+</div>
 <p>Die Verkündung Goebbels, das Hitler den Anschlag überlebt hatte, erfolgte beinahe gleichzeitig mit den Anweisungen der Verschwörer, was für Verwirrung sorgte. Zudem waren auch die Eide der Reichswehr auf Hitler noch intakt. Dementsprechend handelten die Offiziere nicht, sondern warteten zum Teil einfach nur ab.</p>
 <p>So brach der Staatsstreich noch am selben Abend zusammen.</p>
 <p><a name="Folgen"></a></p>
 <h3>Folgen</h3>
 <!--ein Bild-->
-<img src="https://placehold.co/200x200/0000B0/BBBBF0" alt="placeholder" style="float: left; padding-right: 30px; padding-bottom: 1em;">
+<div class="img-frame">
+    <img src="https://placehold.co/200x200/0000B0/BBBBF0" alt="placeholder" class="img-left">
+    <p>description</p>
+</div>
 <p><a href="/Operation_Walkuere/beteiligte_Personen/General_Friedrich_Olbricht/">Olbricht</a>, <a href="/Operation_Walkuere/beteiligte_Personen/Erich_Hoepner">Hoepner</a>, <a href="/Operation_Walkuere/beteiligte_Personen/Graf_Claus_Schenk_von_Stauffenberg/">Stauffenberg</a>, <a href="/Operation_Walkuere/beteiligte_Personen/Albrecht_Ritter_Mertz_von_Quirnheim/">Quirnheim</a> und <a href="/Operation_Walkuere/beteiligte_Personen/Werner_von_Haeften/">von Haeften</a> wurden festgesetzt. In der Nacht vom 20. auf den 21. Juli lies Generaloberst Friedrich Fromm Olbricht, Quirnheim, Haeften und Stauffenberg im Hinterhof des Bendlerblocks erschießen. Beck bekam die Gelegenheit zum Selbstschuss, schafft es allerdings nicht, sich selbst zu erschiessen und wird nach mehreren Fehlschüssen letztlich auch hingerichtet.</p>
 <p>Fromm selbst, der von den Plänen gewusst und diese toleriert hatte, wurde am 12. März 1945 erschossen.</p>
 <p>In der Folge werden auch Tausende andere Beteiligte festgenommen und mitunter hingerichtet. Teilweise werden auch Familienangehörige verfolgt und bestraft, viele Kinder werden von ihren Müttern getrennt.</p>
 <p><a name="Bedeutung_heute"></a></p>
 <h3>Bedeutung heute</h3>
 <!--ein Bild-->
-<img src="https://placehold.co/200x200/0000B0/BBBBF0" alt="placeholder" style="float: right; padding-left: 50px; padding-bottom: 1em;">
+<div class="img-frame">
+    <img src="https://placehold.co/200x200/0000B0/BBBBF0" alt="placeholder" class="img-right">
+    <p>description</p>
+</div>
 <p>Auch wenn die Wahrnehmung des 20. Juli 1944 lange Zeit kontrovers war, gilt er heute meist als bedeutendster Umsturzversuch gegen Hitler und steht somit symbolisch für den deutschen Widerstand gegen die NS-Diktatur.</p>
 <p>Die Verschwörer zeigten, dass nicht alle Deutschen das NS-Regime unterstützten und das im Gegenteil viele Beteiligte bewusst ihr Leben riskierten, um Krieg und Diktatur zu beenden.</p>
 <p>Deshalb erinnert Deutschland bis heute an den Widerstand des 20. Juli.</p>
@@ -110,6 +191,20 @@
 <p>So bleibt es eine offene Frage, was tatsächlich passiert wäre, wenn die Operation erfolgreich gewesen wäre.</p>
 <hr>
 <p>weiter zu: <a href="/Operation_Walkuere/der_Attentatsversuch_am_20_Juli/">Der Attentatsversuch am 20. Juli →</a></p>
+<script>
+    document.querySelectorAll(".img-frame").forEach(box => {
+        box.addEventListener("click", function(event) {
+            this.classList.add("active")
+        });
+    });
+
+    document.querySelectorAll(".close-img-fullscreen").forEach(box => {
+        box.addEventListener("click", function(event) {
+            event.stopPropagation();
+            this.closest(".img-frame").classList.remove("active");
+        });
+    });
+</script>
 <!--
 + Ziel: Hitler ausschalten, Krieg beenden
 + geplant von:

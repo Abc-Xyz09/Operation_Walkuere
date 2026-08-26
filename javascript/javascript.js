@@ -1,7 +1,5 @@
 function getBreadCrumbs() {
 
-    console.log("BreadCrumbs being called, yay!"); //debugging
-
     let parts = window.location.pathname
     .split("/")
     .filter(Boolean);
