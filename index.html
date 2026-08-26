@@ -71,11 +71,20 @@
 
     .img-frame.active {
         position: fixed;
+        inset: 0;
+
         width: 100vw;
         height: 100vh;
-        inset: 0;
+
+        float: none;
+        margin: none;
+
         background-color: rgb(50, 50, 60);
         float: none;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .img-frame.active > img {
