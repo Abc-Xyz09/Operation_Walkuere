@@ -27,14 +27,22 @@
         <style>
     .img-frame {
         display: flex;
+        flex-direction: column;
         width: fit-content;
         height: fit-content;
         justify-content: center;
         align-content: center;
     }
 
-    .img-right {
+    .img-frame:has(.img-right) {
         float: right;
+    }
+
+    .img-frame:has(.img-left) {
+        float: left;
+    }
+
+    .img-right {
         padding-left: 50px;
         padding-bottom: 1em;
     }
@@ -45,28 +53,128 @@
         padding-bottom: 1em;
     }
 
-    .img-frame p, .img-frame button {
+    .img-frame p,
+    .img-frame button {
         display: none;
     }
 
     .img-frame button {
         position: absolute;
         top: 25px;
-        bottom: 25px;
-        background-color: 0000;
+        right: 25px;
+        background-color: transparent;
         color: white;
+        font-size: 30px;
+        cursor: pointer;
     }
 
     .img-frame.active {
-        position: absolute;
-        width: 100%;
-        height: 100%;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
         background-color: rgb(50, 50, 60);
     }
 
-    .img-frame.img-frame.active p, .img-frame.img-frame.active button {
+    .img-frame.active p,
+    .img-frame.active button {
         display: block;
     }
+
+
+    .img-frame.active .gallery-image {
+        display: none;
+    }
+
+    .img-frame.active .gallery-image.current {
+        display: flex;
+
+        width: 100%;
+        height: 100%;
+
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    /* Bild */
+
+    .img-frame.active .gallery-image.current img {
+        max-width: 80vw;
+        max-height: 80vh;
+
+        padding: 0;
+        float: none;
+    }
+
+
+    /* Beschreibung */
+
+    .img-frame.active .gallery-image.current p {
+        display: block;
+
+        position: absolute;
+
+        bottom: 25px;
+
+        color: white;
+        text-align: center;
+    }
+
+
+    /* Pfeile */
+
+    .img-frame.active .gallery-image.current .gallery-prev,
+    .img-frame.active .gallery-image.current .gallery-next {
+        display: block;
+
+        position: absolute;
+
+        top: 50%;
+        transform: translateY(-50%);
+
+        background: transparent;
+        border: none;
+
+        color: white;
+        font-size: 50px;
+
+        cursor: pointer;
+    }
+
+    .gallery-prev {
+        left: 25px;
+    }
+
+    .gallery-next {
+        right: 25px;
+    }
+
+
+    /* Schließen */
+
+    .close-img-fullscreen {
+        display: none;
+    }
+
+    .img-frame.active > .close-img-fullscreen {
+        display: block;
+
+        position: absolute;
+
+        top: 25px;
+        right: 25px;
+
+        background: transparent;
+        border: none;
+
+        color: white;
+        font-size: 30px;
+
+        cursor: pointer;
+
+        z-index: 1001;
+    }
+
 
     @media (max-width: 600px){
         .img-frame {
@@ -80,6 +188,12 @@
         .img-left {
             padding-right: 0px;
         }
+
+        .img-frame.active .gallery-image.current img {
+        max-width: 90vw;
+        max-height: 75vh;
+    }
+
 
     }
 
@@ -122,8 +236,10 @@
 <h3>Die geplante Umsetzung</h3>
 <!--ein Bild – beweglich?-->
 <div class="img-frame">
-    <img src="https://placehold.co/200x200/0000B0/BBBBF0" alt="placeholder" class="img-left">
-    <p>description</p>
+    <button class="close-img-fullscreen">x</button>
+<p><img src="https://placehold.co/200x200/0000B0/BBBBF0" alt="placeholder" class="img-right">
+<p>description</p></p>
+<p></div></p>
 </div>
 <p>Bereits vor Stauffenbergs Attentatsversuch auf Hitler gab es zahlreiche Attentatsversuche auf den Diktator, welche teilweise von der selben Widerstandsgruppe ausgingen, die auch für Operation Walküre verantwortlich war.</p>
 <p>Die letzte Version der Operation sah vor, das Stauffenberg das <a href="/Operation_Walkuere/der_Attentatsversuch_am_20_Juli/">Attentat</a> auf Hitler während einer Lagebesprechung ausführen sollte.</p>
@@ -133,10 +249,33 @@
 <p>Die neue Regierung sollte anschließend Friedensverhandlungen vorbereiten.</p>
 <p><a name="Das_Attentat_am_20_Juli_1944"></a></p>
 <h3>Das Attentat am 20. Juli 1944</h3>
-<!--ein Bild – beweglich?-->
-<div class="img-frame">
-    <img src="https://placehold.co/200x200/0000B0/BBBBF0" alt="placeholder" class="img-right">
-    <p>description</p>
+<!--drei Bilder-->
+<div class="img-frame gallery">
+<p><button class="close-img-fullscreen">×</button></p>
+<p><div class="gallery-image" id="Attentat-1"></p>
+<p><button class="gallery-prev" data-target="Attentat-3">‹</button></p>
+<p><img src="https://placehold.co/200x200/0000B0/BBBBF0"
+             alt="placeholder"
+             class="img-right"></p>
+<p><p>Beschreibung von Bild 1</p></p>
+<p><button class="gallery-next" data-target="Attentat-2">›</button></p>
+<p></div></p>
+<p><div class="gallery-image" id="Attentat-2"></p>
+<p><button class="gallery-prev" data-target="Attentat-1">‹</button></p>
+<p><img src="https://placehold.co/200x200/0000B0/BBBBF0"
+             alt="placeholder"
+             class="img-right"></p>
+<p><p>Beschreibung von Bild 2</p></p>
+<p><button class="gallery-next" data-target="Attentat-3">›</button></p>
+<p></div></p>
+<p><div class="gallery-image" id="Attentat-3"></p>
+<p><button class="gallery-prev" data-target="Attentat-2">‹</button></p>
+<p><img src="https://placehold.co/200x200/0000B0/BBBBF0"
+             alt="placeholder"
+             class="img-right"></p>
+<p><p>Beschreibung von Bild 3</p></p>
+<p><button class="gallery-next" data-target="Attentat-1">›</button></p>
+<p></div></p>
 </div>
 <p>Stauffenberg reiste zu einer Lagebesprechung zur „Wolfsschanze“ in Ostpreußen.  Hier, im Besprechungsraum nahe Hitlers, platzierte er eine Bombe in einer Aktentasche.</p>
 <p>Kurz darauf verließ Stauffenberg den Raum, bevor gegen Mittag die Bombe explodierte.</p>
@@ -147,8 +286,8 @@
 -->
 <p><a name="Die_Ausfuehrung_von_Operation_Walkuere"></a></p>
 <h3>Die Ausführung von Operation Walküre</h3>
-<!--ein Bild – beweglich?-->
 <div class="img-frame">
+    <button class="close-img-fullscreen">x</button>
     <img src="https://placehold.co/200x200/0000B0/BBBBF0" alt="placeholder" class="img-left">
     <p>description</p>
 </div>
@@ -157,8 +296,8 @@
 <p>Auf Drängen Quirnheims, und da Stauffenberg zunächst glaubte, dass Hitler tatsächlich tot sei, hin wurde der Alarm letzten Endes allerdings dennoch ausgelöst.</p>
 <p><a name="Gruende_fuer_das_Scheitern"></a></p>
 <h3>Gründe für das Scheitern</h3>
-<!--ein Bild -->
 <div class="img-frame">
+    <button class="close-img-fullscreen">x</button>
     <img src="https://placehold.co/200x200/0000B0/BBBBF0" alt="placeholder" class="img-right">
     <p>description</p>
 </div>
@@ -166,8 +305,8 @@
 <p>So brach der Staatsstreich noch am selben Abend zusammen.</p>
 <p><a name="Folgen"></a></p>
 <h3>Folgen</h3>
-<!--ein Bild-->
 <div class="img-frame">
+    <button class="close-img-fullscreen">x</button>
     <img src="https://placehold.co/200x200/0000B0/BBBBF0" alt="placeholder" class="img-left">
     <p>description</p>
 </div>
@@ -176,8 +315,8 @@
 <p>In der Folge werden auch Tausende andere Beteiligte festgenommen und mitunter hingerichtet. Teilweise werden auch Familienangehörige verfolgt und bestraft, viele Kinder werden von ihren Müttern getrennt.</p>
 <p><a name="Bedeutung_heute"></a></p>
 <h3>Bedeutung heute</h3>
-<!--ein Bild-->
 <div class="img-frame">
+    <button class="close-img-fullscreen">x</button>
     <img src="https://placehold.co/200x200/0000B0/BBBBF0" alt="placeholder" class="img-right">
     <p>description</p>
 </div>
@@ -193,22 +332,130 @@
 <p>So bleibt es eine offene Frage, was tatsächlich passiert wäre, wenn die Operation erfolgreich gewesen wäre.</p>
 <hr>
 <p>weiter zu: <a href="/Operation_Walkuere/der_Attentatsversuch_am_20_Juli/">Der Attentatsversuch am 20. Juli →</a></p>
-<!--
 <script>
-    document.querySelectorAll(".img-frame").forEach(box => {
-        box.addEventListener("click", function(event) {
-            this.classList.add("active")
-        });
+
+//
+// EINZELBILDER
+//
+
+document.querySelectorAll(".img-frame:not(.gallery)").forEach(frame => {
+
+    frame.addEventListener("click", function(event) {
+
+        // Nicht öffnen, wenn der Close-Button geklickt wurde
+        if (event.target.classList.contains("close-img-fullscreen")) {
+            return;
+        }
+
+        this.classList.add("active");
     });
 
-    document.querySelectorAll(".close-img-fullscreen").forEach(box => {
-        box.addEventListener("click", function(event) {
-            event.stopPropagation();
-            this.closest(".img-frame").classList.remove("active");
-        });
+});
+
+
+// Einzelbild schließen
+
+document.querySelectorAll(".img-frame:not(.gallery) .close-img-fullscreen").forEach(button => {
+
+    button.addEventListener("click", function(event) {
+
+        event.stopPropagation();
+
+        this.closest(".img-frame").classList.remove("active");
     });
+
+});
+
+
+//
+// GALERIEN
+//
+
+document.querySelectorAll(".img-frame.gallery").forEach(gallery => {
+
+    const images = gallery.querySelectorAll(".gallery-image");
+
+    //
+    // Bild anklicken → Fullscreen
+    //
+
+    images.forEach(image => {
+
+        const img = image.querySelector("img");
+
+        img.addEventListener("click", function(event) {
+
+            event.stopPropagation();
+
+            // Fullscreen öffnen
+            gallery.classList.add("active");
+
+            // Alle Bilder zurücksetzen
+            images.forEach(otherImage => {
+                otherImage.classList.remove("current");
+            });
+
+            // Das angeklickte Bild anzeigen
+            image.classList.add("current");
+        });
+
+    });
+
+
+    //
+    // Schließen
+    //
+
+    const closeButton = gallery.querySelector(".close-img-fullscreen");
+
+    closeButton.addEventListener("click", function(event) {
+
+        event.stopPropagation();
+
+        gallery.classList.remove("active");
+
+        // current zurücksetzen
+        images.forEach(image => {
+            image.classList.remove("current");
+        });
+
+    });
+
+
+    //
+    // Pfeile
+    //
+
+    gallery.querySelectorAll(".gallery-prev, .gallery-next").forEach(button => {
+
+        button.addEventListener("click", function(event) {
+
+            event.stopPropagation();
+
+            // ID des Zielbildes holen
+            const targetId = this.dataset.target;
+
+            // Zielbild finden
+            const target = document.getElementById(targetId);
+
+            if (!target) {
+                return;
+            }
+
+            // Alle Bilder ausblenden
+            images.forEach(image => {
+                image.classList.remove("current");
+            });
+
+            // Zielbild anzeigen
+            target.classList.add("current");
+
+        });
+
+    });
+
+});
 </script>
--->
 <!--
 + Ziel: Hitler ausschalten, Krieg beenden
 + geplant von:
