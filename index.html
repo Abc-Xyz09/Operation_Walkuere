@@ -251,14 +251,64 @@
             margin: 0 auto;
         }
 
-
+    
     }
 
+    .audioguide {
+        display: flex;
+        align-items: center;
+        gap: 12px;
 
+        width: fit-content;
+
+        padding: 8px 12px;
+
+        background-color: rgb(50, 50, 60);
+        color: white;
+        border-radius: 6px;
+    }
+
+    .audioguide button,
+    .audioguide a {
+        border: none;
+        background: transparent;
+        color: white;
+
+        font-size: 18px;
+        cursor: pointer;
+
+        text-decoration: none;
+    }
+
+    .audio-title {
+        font-size: 0.9rem;
+    }
+
+    .audio-download {
+        font-size: 20px !important;
+    }
+
+    .audioguide button:hover,
+    .audioguide a:hover {
+        color: #bbbbf0;
+}
 </style>
 <h2>Der Stauffenberg-Putsch und Operation Walküre</h2>
 <p>Operation Walküre war ein von langer Hand geplanter Versuch, Hitler und das Naziregime zu stürzen. Hunderte von Menschen aus unter anderem dem Militär und der Politik hatten daran teil.</p>
 <p>Doch was genau passierte dabei eigentlich?</p>
+<div class="audioguide">
+    <button class="audio-play" aria-label="Audioguide abspielen">
+        ▶
+    </button>
+    <span class="audio-title">Audioguide</span>
+    <a href="/Operation_Walkuere/assets/audioguide.mp3"
+       download
+       class="audio-download"
+       aria-label="Audioguide herunterladen">
+        ↓
+    </a>
+    <audio class="audio-player" src="/Operation_Walkuere/assets/audioguide.mp3"></audio>
+</div>
 <div class="table-of-contents">
     <h1>Inhaltsverzeichnis</h1>
     <ol>
@@ -510,6 +560,25 @@ document.querySelectorAll(".img-frame.gallery").forEach(gallery => {
 
     });
 
+});
+
+const audioGuide = document.querySelector(".audio-player");
+const playButton = document.querySelector(".audio-play");
+
+playButton.addEventListener("click", () => {
+
+    if (audioGuide.paused) {
+        audioGuide.play();
+        playButton.textContent = "❚❚";
+    } else {
+        audioGuide.pause();
+        playButton.textContent = "▶";
+    }
+
+});
+
+audioGuide.addEventListener("ended", () => {
+    playButton.textContent = "▶";
 });
 </script>
 <!--
