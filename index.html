@@ -257,52 +257,24 @@
     
     }
 
-    .audioguide {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-
-        width: fit-content;
-
-        padding: 8px 12px;
-
-        background-color: rgb(50, 50, 60);
-        color: white;
-        border-radius: 6px;
-    }
-
-    .audioguide button,
-    .audioguide a {
-        border: none;
-        background: transparent;
-        color: white;
-
-        font-size: 18px;
-        cursor: pointer;
-
-        text-decoration: none;
-    }
-
-    .audio-title {
-        font-size: 0.9rem;
-    }
-
-    .audio-download {
-        font-size: 20px !important;
-    }
-
-    .audioguide button:hover,
-    .audioguide a:hover {
-        color: #bbbbf0;
+.audioguide {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  gap: 6px;
+  margin-bottom: 20px;
 }
 </style>
 <h2>Der Stauffenberg-Putsch und Operation Walküre</h2>
 <p>Operation Walküre war ein von langer Hand geplanter Versuch, Hitler und das Naziregime zu stürzen. Hunderte von Menschen aus unter anderem dem Militär und der Politik hatten daran teil.</p>
 <p>Doch was genau passierte dabei eigentlich?</p>
-<p><audio controls src="/Operation_Walkuere/assets/test.mp3" style="margin: 0px auto;"></audio>
-<a href="/Operation_Walkuere/assets/moonlight-sonata-to-test-it-all.mp3" download style="margin: 5px auto">
-Audioguide herunterladen ↓
-</a></p>
+<div class="audioguide">
+    <audio controls src="/Operation_Walkuere/assets/moonlight-sonata-to-test-it-all.mp3" style="margin: 0px opx;"></audio>
+    <a href="/Operation_Walkuere/assets/moonlight-sonata-to-test-it-all.mp3" download style="margin: 5px 0px">
+        Audioguide herunterladen ↓
+    </a>
+</div>
 <div class="table-of-contents">
     <h1>Inhaltsverzeichnis</h1>
     <ol>
