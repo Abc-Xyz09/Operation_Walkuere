@@ -46,14 +46,17 @@
 
     .img-right {
         padding-bottom: 1em;
-        height: 200px;
-        width: auto;
     }
 
     .img-left {
         padding-bottom: 1em;
-        height: 200px;
-        width: auto;
+    }
+
+    .img-frame img {
+    height: 200px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
     }
 
     .img-frame p,
@@ -72,22 +75,34 @@
         cursor: pointer;
     }
 
+    .gallery-image:not(:first-of-type) {
+        display: none;
+    }
+
     .img-frame.active {
         position: fixed;
-        inset: 0;
+
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
 
         width: 100vw;
         height: 100vh;
 
         float: none;
-        margin: none;
+        margin: 0;
+        padding 0;
 
         background-color: rgb(50, 50, 60);
         float: none;
 
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        z-index: 9999;
     }
 
     .img-frame.active > img {
@@ -261,7 +276,7 @@
 <!--ein Bild – beweglich?-->
 <div class="img-frame">
     <button class="close-img-fullscreen">x</button>
-    <img src="/Operation_Walkuere/assets/Umsetzung.png" alt="placeholder" class="img-right">
+    <img src="/Operation_Walkuere/assets/Umsetzung.png" alt="placeholder" class="img-left">
     <p>description</p>
 </div>
 <p>Bereits vor Stauffenbergs Attentatsversuch auf Hitler gab es zahlreiche Attentatsversuche auf den Diktator, welche teilweise von der selben Widerstandsgruppe ausgingen, die auch für Operation Walküre verantwortlich war.</p>
