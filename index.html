@@ -214,6 +214,16 @@
         z-index: 1001;
     }
 
+    .img-frame.active img {
+        height: auto;
+        width: auto;
+
+        max-width: 80vw !important;
+        max-height: 70vh !important;
+
+        object-fit: contain;
+    }
+
 
     @media (max-width: 600px){
         .img-frame {
@@ -228,8 +238,8 @@
             padding-right: 0px;
         }
 
-        .img-frame.active .gallery-image.current img {
-            max-width: 90vw;
+        .img-frame.active img {
+            max-width: 85vw;
             max-height: 75vh;
         }
 
